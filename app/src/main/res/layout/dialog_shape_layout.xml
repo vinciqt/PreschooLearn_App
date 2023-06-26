@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/textShapeDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#9e330d"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnShapeDialog"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtnvoiceout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textShapeDialog"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <ImageButton
+        android:id="@+id/imgbtnvoiceout"
+        android:layout_width="138dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#000000" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

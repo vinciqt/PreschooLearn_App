@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".quiz">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00244E0E"
+            android:fontFamily="@font/aksi_font"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            android:textColor="@color/white"
+            android:textSize="2sp"
+            app:cornerRadius="90dp"
+            app:strokeColor="#633818"
+            app:strokeWidth="6dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/btn_quiz"
+            android:textColor="#9e330d"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="635dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="171dp"
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="96dp">
+
+            <ImageButton
+                android:id="@+id/btnimage"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/quizimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/btnstar"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+            <ImageButton
+                android:id="@+id/btnvoice"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:scaleY="1.06"
+                android:src="@drawable/quizvoice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
+
+            <ImageButton
+                android:id="@+id/btnviewhistory"
+                android:layout_width="294dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/viewhistory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

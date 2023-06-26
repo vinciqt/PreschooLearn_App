@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".quizcategory">
+
+    <Button
+        android:id="@+id/btnqcshape"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="#244E0E"
+        android:fontFamily="@font/aksi_font"
+        android:text="@string/btn_shape"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll"
+        app:strokeColor="#633818"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnqccolor"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#244E0E"
+        android:fontFamily="@font/aksi_font"
+        android:text="@string/btn_color"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnqcshape"
+        app:strokeColor="#633818"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnqcalphabet"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#244E0E"
+        android:fontFamily="@font/aksi_font"
+        android:text="@string/btn_alphabet"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnqccolor"
+        app:strokeColor="#633818"
+        app:strokeWidth="2dp" />
+
+
+    <Button
+        android:id="@+id/btnqcnumber"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#244E0E"
+        android:fontFamily="@font/aksi_font"
+        android:text="@string/btn_num"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnqcalphabet"
+        app:strokeColor="#633818"
+        app:strokeWidth="2dp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00244E0E"
+            android:fontFamily="@font/aksi_font"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            android:textColor="@color/white"
+            android:textSize="2sp"
+            app:cornerRadius="90dp"
+            app:strokeColor="#633818"
+            app:strokeWidth="6dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="sans-serif-black"
+            android:text="QUIZ CATEGORY"
+            android:textColor="#9e330d"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

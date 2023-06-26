@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SCAN</string>
+    <string name="btn_start">START LEARNING</string>
+    <string name="btn_shape">SHAPE</string>
+    <string name="btn_color">COLOR</string>
+    <string name="btn_alphabet">ALPHABET</string>
+    <string name="btn_num">NUMBER</string>
+    <string name="btn_quiz">QUIZ</string>
+    <string name="txt_category">CATEGORY</string>
+    <string name="txt_shapes">SHAPES</string>
+    <string name="txt_color">COLORS</string>
+    <string name="txt_alphabet">ALPHABETS</string>
+    <string name="txt_number">NUMBERS</string>
+    <string name="txt_square">SQUARE</string>
+    <string name="txt_star">STAR</string>
+</resources>
