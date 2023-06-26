@@ -13,14 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="673dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginTop="689dp"
+        android:layout_marginEnd="67dp"
         android:backgroundTint="#244E0E"
         android:fontFamily="@font/aksi_font"
         android:text="@string/btn_start"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:strokeColor="#633818"
-        app:strokeWidth="2dp"/>
+        app:strokeWidth="2dp" />
 
 </RelativeLayout>

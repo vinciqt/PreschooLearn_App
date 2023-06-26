@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".quizrandom">
+
+    <ImageView
+        android:layout_width="233dp"
+        android:layout_height="210dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:src="@drawable/square"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:background="#5d3122"
+        app:layout_constraintBottom_toTopOf="@+id/micbtn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/micbtn"
+        android:layout_width="152dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#000000" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00244E0E"
+            android:fontFamily="@font/aksi_font"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            android:textColor="@color/white"
+            android:textSize="2sp"
+            app:cornerRadius="90dp"
+            app:strokeColor="#633818"
+            app:strokeWidth="6dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="sans-serif-black"
+            android:text="QUIZ"
+            android:textColor="#9e330d"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
