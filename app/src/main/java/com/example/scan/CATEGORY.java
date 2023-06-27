@@ -19,6 +19,9 @@ public class CATEGORY extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         button = findViewById(R.id.btnback);
+
+        Intent svc=new Intent(this, bgService.class);
+        startService(svc); //OR stopService(svc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -16,6 +16,8 @@ public class number extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
         button = findViewById(R.id.btnback);
+        Intent svc=new Intent(this, bgService.class);
+        stopService(svc); //OR stopService(svc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

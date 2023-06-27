@@ -25,6 +25,9 @@ public class shape extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shape);
         button = findViewById(R.id.btnback);
+
+        Intent svc=new Intent(this, bgService.class);
+        stopService(svc); //OR stopService(svc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
