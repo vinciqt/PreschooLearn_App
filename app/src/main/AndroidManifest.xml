@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,13 @@
         android:theme="@style/Theme.SCAN"
         tools:targetApi="31">
         <activity
-            android:name=".quizrandom"
+            android:name=".quizimage"
+            android:exported="false" />
+        <activity
+            android:name=".quizcategory"
+            android:exported="false" />
+        <activity
+            android:name=".quizvoice"
             android:exported="false" />
         <activity
             android:name=".quiz"
@@ -44,7 +51,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".bgService" android:stopWithTask="true"/>
+
+        <service
+            android:name=".bgService"
+            android:stopWithTask="true" />
     </application>
 
 </manifest>

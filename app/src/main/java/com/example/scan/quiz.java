@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class quiz extends AppCompatActivity {
 
-    private ImageButton button, buttonVoice;
+    private ImageButton button, buttonVoice, buttonImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class quiz extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
         button = findViewById(R.id.btnback);
         Intent svc=new Intent(this, bgService.class);
-        stopService(svc); //OR stopService(svc);
+        startService(svc); //OR stopService(svc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +29,18 @@ public class quiz extends AppCompatActivity {
         buttonVoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(quiz.this, quizrandom.class);
+                Intent intent = new Intent(quiz.this, quizcategory.class);
+                intent.putExtra("screen","screen_voice");
+                startActivity(intent);
+            }
+        });
+
+        buttonImage = findViewById(R.id.btnimage);
+        buttonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(quiz.this, quizcategory.class);
+                intent.putExtra("screen","screen_image");
                 startActivity(intent);
             }
         });

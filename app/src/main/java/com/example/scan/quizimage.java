@@ -7,33 +7,29 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class quizimage extends AppCompatActivity {
 
-    private Button button;
+    private ImageButton button;
 
-    private MediaPlayer mp;
+    private Button btnqshape, btnqcolor, btnqalphabet, btnqnumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.start_learning);
-
-
+        setContentView(R.layout.activity_quizimage);
+        button = findViewById(R.id.btnback);
         Intent svc=new Intent(this, bgService.class);
+        String currentScreen = getIntent().getStringExtra("screen");
         startService(svc); //OR stopService(svc);
-
-        button = findViewById(R.id.btnstart);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
-                Intent intent=new Intent(MainActivity.this,CATEGORY.class);
+                Intent intent=new Intent(quizimage.this,quizcategory.class);
+                intent.putExtra("screen", currentScreen);
                 startActivity(intent);
             }
         });
-
     }
 }

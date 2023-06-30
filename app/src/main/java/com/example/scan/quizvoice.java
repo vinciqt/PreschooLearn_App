@@ -15,7 +15,6 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -23,7 +22,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class quizrandom extends AppCompatActivity {
+public class quizvoice extends AppCompatActivity {
 
     private ImageButton button;
     public static final Integer RecordAudioRequestCode = 1;
@@ -34,7 +33,10 @@ public class quizrandom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_random);
+        setContentView(R.layout.activity_quiz_voice);
+        Intent svc=new Intent(this, bgService.class);
+        String currentScreen = getIntent().getStringExtra("screen");
+        stopService(svc); //OR stopService(svc);
         if(ContextCompat.checkSelfPermission(this,Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
             checkPermission();
         }
@@ -42,7 +44,8 @@ public class quizrandom extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(quizrandom.this,quiz.class);
+                Intent intent=new Intent(quizvoice.this,quizcategory.class);
+                intent.putExtra("screen", currentScreen);
                 startActivity(intent);
             }
         });
