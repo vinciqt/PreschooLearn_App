@@ -13,4 +13,7 @@
     <string name="txt_number">NUMBERS</string>
     <string name="txt_square">SQUARE</string>
     <string name="txt_star">STAR</string>
+    <string name="txt_blue">BLUE</string>
+    <string name="txt_red">RED</string>
+    <string name="txt_yellow">YELLOW</string>
 </resources>

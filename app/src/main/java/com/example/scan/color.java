@@ -11,6 +11,9 @@ import android.widget.ImageButton;
 public class color extends AppCompatActivity {
 
     private ImageButton button;
+    private ImageButton btnblue, btnred, btnyellow;
+
+    private ImageButton imgbtnvoiceout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,27 @@ public class color extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(color.this,CATEGORY.class);
                 startActivity(intent);
+            }
+        });
+        btnblue = findViewById(R.id.btnblue);
+        btnblue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new ShapeDialog(R.drawable.star, R.string.txt_blue, R.raw.blue).show(getSupportFragmentManager(), ShapeDialog.TAG);
+            }
+        });
+        btnred = findViewById(R.id.btnred);
+        btnred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new ShapeDialog(R.drawable.square, R.string.txt_red, R.raw.red).show(getSupportFragmentManager(), ShapeDialog.TAG);
+            }
+        });
+        btnyellow = findViewById(R.id.btnyellow);
+        btnyellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new ShapeDialog(R.drawable.square, R.string.txt_yellow, R.raw.yellow).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
     }

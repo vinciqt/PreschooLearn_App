@@ -12,7 +12,7 @@
         android:id="@+id/imageView5"
         android:layout_width="233dp"
         android:layout_height="210dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="28dp"
         android:scaleX="1.7"
         android:scaleY="1.7"
         android:src="@drawable/square"
@@ -24,11 +24,11 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_marginBottom="268dp"
+        android:layout_marginBottom="360dp"
         android:background="#5d3122"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout

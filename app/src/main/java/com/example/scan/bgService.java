@@ -17,7 +17,7 @@ public class bgService extends Service {
         super.onCreate();
 
 
-        player = MediaPlayer.create(this, R.raw.bgtest);
+        player = MediaPlayer.create(this, R.raw.bgmusicss);
         player.setLooping(true); // Set looping
         player.setVolume(100,100);
 

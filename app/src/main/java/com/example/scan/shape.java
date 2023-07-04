@@ -13,8 +13,7 @@ import android.widget.ImageButton;
 public class shape extends AppCompatActivity {
 
     private ImageButton button;
-    private ImageButton btnstar;
-    private ImageButton btnsquare;
+    private ImageButton btnstar, btnsquare;
 
     private ImageButton imgbtnvoiceout;
 
