@@ -13,7 +13,16 @@
     <string name="txt_number">NUMBERS</string>
     <string name="txt_square">SQUARE</string>
     <string name="txt_star">STAR</string>
+    <string name="txt_circle">CIRCLE</string>
+    <string name="txt_rectangle">RECTANGLE</string>
+    <string name="txt_diamond">DIAMOND</string>
+    <string name="txt_triangle">TRIANGLE</string>
+    <string name="txt_heart">HEART</string>
+    <string name="txt_oval">OVAL</string>
     <string name="txt_blue">BLUE</string>
     <string name="txt_red">RED</string>
     <string name="txt_yellow">YELLOW</string>
+    <string name="txt_orange">ORANGE</string>
+    <string name="txt_violet">VIOLET</string>
+    <string name="txt_green">GREEN</string>
 </resources>

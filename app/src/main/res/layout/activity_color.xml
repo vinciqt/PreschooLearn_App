@@ -69,7 +69,7 @@
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/square"
+                android:src="@drawable/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/star"
+                android:src="@drawable/red"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -106,21 +106,21 @@
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/circle"
+                android:src="@drawable/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
             <ImageButton
-                android:id="@+id/btnrectangle"
+                android:id="@+id/btnorange"
                 android:layout_width="155dp"
                 android:layout_height="155dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/rec"
+                android:src="@drawable/orange"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -137,27 +137,27 @@
             tools:layout_editor_absoluteY="218dp">
 
             <ImageButton
-                android:id="@+id/btndiamond"
+                android:id="@+id/btnviolet"
                 android:layout_width="155dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dia"
+                android:src="@drawable/violet"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
             <ImageButton
-                android:id="@+id/btntriangle"
+                android:id="@+id/btngreen"
                 android:layout_width="155dp"
                 android:layout_height="155dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/triangle"
+                android:src="@drawable/green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
