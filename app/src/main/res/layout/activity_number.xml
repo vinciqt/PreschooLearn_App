@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".shape">
+    tools:context=".number">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,14 +50,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="635dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,27 +60,27 @@
                 tools:layout_editor_absoluteY="96dp">
 
                 <ImageButton
-                    android:id="@+id/btnsquare"
+                    android:id="@+id/btnone"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/square"
+                    android:src="@drawable/one"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
                 <ImageButton
-                    android:id="@+id/btnstar"
+                    android:id="@+id/btntwo"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/star"
+                    android:src="@drawable/two"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -105,27 +97,27 @@
                 tools:layout_editor_absoluteY="218dp">
 
                 <ImageButton
-                    android:id="@+id/btncircle"
+                    android:id="@+id/btnthree"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/circle"
+                    android:src="@drawable/three"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
                 <ImageButton
-                    android:id="@+id/btnrectangle"
+                    android:id="@+id/btnfour"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/rec"
+                    android:src="@drawable/four"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -142,33 +134,106 @@
                 tools:layout_editor_absoluteY="218dp">
 
                 <ImageButton
-                    android:id="@+id/btndiamond"
+                    android:id="@+id/btnfive"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/dia"
+                    android:src="@drawable/five"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
                 <ImageButton
-                    android:id="@+id/btntriangle"
+                    android:id="@+id/btnsix"
                     android:layout_width="155dp"
                     android:layout_height="155dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/triangle"
+                    android:src="@drawable/six"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
             </LinearLayout>
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal|fill_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="218dp">
+
+                <ImageButton
+                    android:id="@+id/btnseven"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_marginTop="44dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/seven"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintStart_toEndOf="@+id/btnstar"
+                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+                <ImageButton
+                    android:id="@+id/btneight"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="44dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/eight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal|fill_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="218dp">
+
+                <ImageButton
+                    android:id="@+id/btnnine"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_marginTop="44dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintStart_toEndOf="@+id/btnstar"
+                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+                <ImageButton
+                    android:id="@+id/btnten"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="44dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ten"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+            </LinearLayout>
 
     </LinearLayout>
 
