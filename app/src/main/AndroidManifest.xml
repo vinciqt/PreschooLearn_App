@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SCAN"
         tools:targetApi="31">
         <activity
+            android:name=".quizhistory"
+            android:exported="false" />
+        <activity
             android:name=".quizimage"
             android:exported="false" />
         <activity

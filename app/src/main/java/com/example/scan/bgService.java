@@ -16,20 +16,18 @@ public class bgService extends Service {
     public void onCreate() {
         super.onCreate();
 
-
         player = MediaPlayer.create(this, R.raw.bgmusicss);
         player.setLooping(true); // Set looping
         player.setVolume(100,100);
 
     }
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
 
         player.start();
 
         return Service.START_STICKY;
     }
-
     public void onStart(Intent intent, int startId) {
         // TODO
 
@@ -45,7 +43,8 @@ public class bgService extends Service {
 
     }
     public void onPause() {
-
+            player.stop();
+            player.release();
     }
     @Override
     public void onDestroy() {

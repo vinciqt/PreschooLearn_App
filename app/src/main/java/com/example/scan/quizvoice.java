@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class quizvoice extends AppCompatActivity {
+
+    MediaPlayer mediaplayer;
 
     private ImageButton button;
     public static final Integer RecordAudioRequestCode = 1;
@@ -86,15 +89,21 @@ public class quizvoice extends AppCompatActivity {
 
             @Override
             public void onError(int i) {
-                Toast.makeText(getBaseContext(),"Mali",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"TRY AGAIN",Toast.LENGTH_SHORT).show();
+                mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.please);
+                mediaplayer.start();
             }
 
             @Override
             public void onResults(Bundle bundle) {
 
                 ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-
                 Toast.makeText(getBaseContext(),data.get(0),Toast.LENGTH_LONG).show();
+                if (data.get(0).equals("square")){
+                    mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.amazing);
+                    mediaplayer.start();
+                }
+
             }
 
             @Override
