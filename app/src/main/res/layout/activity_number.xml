@@ -53,7 +53,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="match_parent"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,34 +61,45 @@
 
                 <ImageButton
                     android:id="@+id/btnone"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/one"
+                    android:src="@drawable/numberone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-                <ImageButton
-                    android:id="@+id/btntwo"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/two"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="96dp">
+
+            <ImageButton
+                android:id="@+id/btntwo"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/numbertwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -98,34 +109,45 @@
 
                 <ImageButton
                     android:id="@+id/btnthree"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/three"
+                    android:src="@drawable/numberthree"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-                <ImageButton
-                    android:id="@+id/btnfour"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/four"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
+            <ImageButton
+                android:id="@+id/btnfour"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/numberfour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,34 +157,45 @@
 
                 <ImageButton
                     android:id="@+id/btnfive"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/five"
+                    android:src="@drawable/numberfive"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-                <ImageButton
-                    android:id="@+id/btnsix"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/six"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
+            <ImageButton
+                android:id="@+id/btnsix"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/numbersix"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -172,34 +205,45 @@
 
                 <ImageButton
                     android:id="@+id/btnseven"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/seven"
+                    android:src="@drawable/numberseven"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-                <ImageButton
-                    android:id="@+id/btneight"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/eight"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
+            <ImageButton
+                android:id="@+id/btneight"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/numbereight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -209,31 +253,41 @@
 
                 <ImageButton
                     android:id="@+id/btnnine"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/nine"
+                    android:src="@drawable/numbernine"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
 
-                <ImageButton
-                    android:id="@+id/btnten"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/ten"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll" />
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
+            <ImageButton
+                android:id="@+id/btnten"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/numberten"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll" />
+        </LinearLayout>
 
     </LinearLayout>
 

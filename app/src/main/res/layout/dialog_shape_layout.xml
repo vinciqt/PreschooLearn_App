@@ -19,21 +19,20 @@
 
     <ImageButton
         android:id="@+id/btnShapeDialog"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="336dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/imgbtnvoiceout"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textShapeDialog"
-        app:layout_constraintVertical_bias="0.834" />
+        app:layout_constraintTop_toBottomOf="@+id/shapeDialogVideo" />
 
     <ImageButton
         android:id="@+id/imgbtnvoiceout"
-        android:layout_width="138dp"
-        android:layout_height="131dp"
+        android:layout_width="94dp"
+        android:layout_height="92dp"
         android:layout_marginBottom="72dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
@@ -42,7 +41,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShapeDialog"
+        app:layout_constraintVertical_bias="0.0"
         app:tint="#000000" />
 
+    <VideoView
+        android:id="@+id/shapeDialogVideo"
+        android:layout_width="365dp"
+        android:layout_height="335dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textShapeDialog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

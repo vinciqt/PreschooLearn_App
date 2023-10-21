@@ -103,6 +103,11 @@ public class quizvoice extends AppCompatActivity {
                     mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.amazing);
                     mediaplayer.start();
                 }
+                else {
+                    Toast.makeText(getBaseContext(),"TRY AGAIN",Toast.LENGTH_SHORT).show();
+                    mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.please);
+                    mediaplayer.start();
+                }
 
             }
 

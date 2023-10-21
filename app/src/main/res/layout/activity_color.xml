@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,19 @@
     android:background="@drawable/bg"
     tools:context=".color">
 
-    <LinearLayout
-        android:id="@+id/ll"
+    <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/btnback"
@@ -45,18 +49,10 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="635dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="155dp"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,8 +60,8 @@
 
             <ImageButton
                 android:id="@+id/btnblue"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
@@ -75,23 +71,33 @@
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="96dp">
             <ImageButton
                 android:id="@+id/btnred"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
-                android:layout_marginStart="28dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/red"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="155dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +107,8 @@
 
             <ImageButton
                 android:id="@+id/btnyellow"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
@@ -112,23 +118,34 @@
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btnorange"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
-                android:layout_marginStart="28dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/orange"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="155dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -138,8 +155,8 @@
 
             <ImageButton
                 android:id="@+id/btnviolet"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
@@ -149,20 +166,31 @@
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btngreen"
-                android:layout_width="155dp"
-                android:layout_height="155dp"
-                android:layout_marginStart="28dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
-
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
