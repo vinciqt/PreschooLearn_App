@@ -37,10 +37,10 @@ public class quizcategory extends AppCompatActivity {
             goToQuizVoice(btnqnumber, R.raw.numbers, R.id.btnqcnumber,currentScreen);
         }
         if (currentScreen.equals("screen_image")) {
-            goToQuizImage(btnqshape, R.raw.shapes, R.id.btnqcshape,currentScreen);
-            goToQuizImage(btnqcolor, R.raw.colors, R.id.btnqccolor,currentScreen);
-            goToQuizImage(btnqalphabet, R.raw.alphabet, R.id.btnqcalphabet,currentScreen);
-            goToQuizImage(btnqnumber, R.raw.numbers, R.id.btnqcnumber,currentScreen);
+            goToQuizImage(btnqshape, R.raw.shapes, R.id.btnqcshape,currentScreen, "Shape");
+            goToQuizImage(btnqcolor, R.raw.colors, R.id.btnqccolor,currentScreen, "Color");
+            goToQuizImage(btnqalphabet, R.raw.alphabet, R.id.btnqcalphabet,currentScreen, "Alphabet");
+            goToQuizImage(btnqnumber, R.raw.numbers, R.id.btnqcnumber,currentScreen, "Number");
         }
     }
 
@@ -57,7 +57,7 @@ public class quizcategory extends AppCompatActivity {
             }
         });
     }
-    private void goToQuizImage(Button btn, int raw, int id,String screen){
+    private void goToQuizImage(Button btn, int raw, int id,String screen, String screenName){
         MediaPlayer mp = MediaPlayer.create(getBaseContext(),raw);
         btn = findViewById(id);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +66,7 @@ public class quizcategory extends AppCompatActivity {
                 mp.start();
                 Intent intent=new Intent(quizcategory.this,quizimage.class);
                 intent.putExtra("screen", screen);
+                intent.putExtra("screen_name", screenName);
                 startActivity(intent);
             }
         });

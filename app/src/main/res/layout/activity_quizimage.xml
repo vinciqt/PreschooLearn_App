@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/plain"
-    tools:context=".quizvoice">
+    tools:context=".quizimage">
 
     <LinearLayout
         android:id="@+id/ll"
@@ -71,7 +71,7 @@
             app:tint="#000000" />
 
         <ImageView
-            android:id="@+id/imageviewqimage"
+            android:id="@+id/imageViewQuestion"
             android:layout_width="188dp"
             android:layout_height="176dp"
             android:layout_gravity="center_vertical"
