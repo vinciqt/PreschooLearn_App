@@ -41,6 +41,7 @@ public class quiz extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(quiz.this, quizcategory.class);
                 intent.putExtra("screen","screen_image");
+                intent.putExtra("screen_name", "");
                 startActivity(intent);
             }
         });

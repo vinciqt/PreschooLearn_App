@@ -37,6 +37,7 @@ public class quizcategory extends AppCompatActivity {
             goToQuizVoice(btnqnumber, R.raw.numbers, R.id.btnqcnumber,currentScreen);
         }
         if (currentScreen.equals("screen_image")) {
+
             goToQuizImage(btnqshape, R.raw.shapes, R.id.btnqcshape,currentScreen, "Shape");
             goToQuizImage(btnqcolor, R.raw.colors, R.id.btnqccolor,currentScreen, "Color");
             goToQuizImage(btnqalphabet, R.raw.alphabet, R.id.btnqcalphabet,currentScreen, "Alphabet");

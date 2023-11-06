@@ -40,12 +40,16 @@ public class ShapeQuizData {
         return hashMapQuestion.get(keyName);
     }
 
-    public int questionCounter(){
+    public int questionCounterShape(){
         if(SHAPE_QUESTION_COUNTER > SHAPE_QUESTION_NAMES.length){
             return SHAPE_QUESTION_SIZE;
         }
         SHAPE_QUESTION_COUNTER++;
         return SHAPE_QUESTION_COUNTER;
+    }
+
+    public static void resetCounter () {
+        SHAPE_QUESTION_COUNTER = -1;
     }
 
 }

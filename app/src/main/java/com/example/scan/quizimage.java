@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.scan.quizData.AlphabetQuestion;
+import com.example.scan.quizData.AlphabetQuizData;
+import com.example.scan.quizData.ColorQuestion;
+import com.example.scan.quizData.ColorQuizData;
+import com.example.scan.quizData.NumberQuestion;
+import com.example.scan.quizData.NumberQuizData;
 import com.example.scan.quizData.ShapeQuestion;
 import com.example.scan.quizData.ShapeQuizData;
 
@@ -42,6 +48,9 @@ public class quizimage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizimage);
+
+        new AlphabetQuizData().setAlphabetQuestion();
+
         button = findViewById(R.id.btnback);
         Intent svc = new Intent(this, bgService.class);
         String currentScreen = getIntent().getStringExtra("screen");
@@ -56,78 +65,194 @@ public class quizimage extends AppCompatActivity {
                 Intent intent = new Intent(quizimage.this, quizcategory.class);
                 intent.putExtra("screen", currentScreen);
                 startActivity(intent);
+                ShapeQuizData.resetCounter();
+                ColorQuizData.resetCounter();
+                AlphabetQuizData.resetCounter();
+                NumberQuizData.resetCounter();
             }
         });
 
 
-
+        System.out.println("SCREEN NAME " +  screenName);
         if (screenName.equals("Shape")) {
-            generateShapeQuestion(currentScreen);
+            generateShapeQuestion(currentScreen,screenName);
         }
-        if (screenName == "Color") {
-
+        if (screenName.equals("Color")) {
+            generateColorQuestion(currentScreen, screenName);
         }
-        if (screenName == "Alphabet") {
-
+        if (screenName.equals("Alphabet")) {
+            generateAlphabetQuestion(currentScreen, screenName);
         }
-        if (screenName == "Number") {
-
+        if (screenName.equals("Number")) {
+            generateNumberQuestion(currentScreen, screenName);
         }
     }
 
-    public void generateShapeQuestion(String currentScreen) {
-        int counter = new ShapeQuizData().questionCounter();
+    public void generateShapeQuestion(String currentScreen, String screenName) {
+        int counterShape = new ShapeQuizData().questionCounterShape();
 
-        if(counter >= ShapeQuizData.SHAPE_QUESTION_NAMES.length) {
-          finishQuiz(currentScreen);
+        if(counterShape >= ShapeQuizData.SHAPE_QUESTION_NAMES.length) {
+          finishQuiz(currentScreen, screenName);
           return;
         }
 
-        ShapeQuestion question = new ShapeQuizData().getOneQuestion(ShapeQuizData.SHAPE_QUESTION_NAMES[counter]);
+        ShapeQuestion question = new ShapeQuizData().getOneQuestion(ShapeQuizData.SHAPE_QUESTION_NAMES[counterShape]);
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
                 if (i == 0) {
                     imageButtons[i].setImageResource(question.getOtherAnswer1());
-                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen);
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
                 }
                 if (i == 1) {
                     imageButtons[i].setImageResource(question.getOtherAnswer2());
-                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen);
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
                 }
                 if (i == 2) {
                     imageButtons[i].setImageResource(question.getOtherAnswer3());
-                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen);
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
                 }
                 if (i == 3) {
                     imageButtons[i].setImageResource(question.getCorAnswer());
-                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen);
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
                 }
             }
     }
 
-    public void targetCorrectAnswer(int indexButton, int indexCorrectAnswer, ImageButton btn, String currentScreen){
+    public void targetCorrectAnswer(int indexButton, int indexCorrectAnswer, ImageButton btn, String currentScreen, String screenName){
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(indexButton == indexCorrectAnswer){
                     System.out.println("CORRECT");
                     score++;
-                    generateShapeQuestion(currentScreen);
 
                 }else{
                     System.out.println("WRONG");
-                    generateShapeQuestion(currentScreen);
+                }
+
+                if(screenName.equals("Shape")){
+                    generateShapeQuestion(currentScreen, screenName);
+                }
+                if(screenName.equals("Color")){
+                    generateColorQuestion(currentScreen, screenName);
+                }
+                if(screenName.equals("Alphabet")){
+                    generateAlphabetQuestion(currentScreen, screenName);
+                }
+                if(screenName.equals("Number")){
+                    generateNumberQuestion(currentScreen, screenName);
                 }
             }
         });
     }
 
-    public void finishQuiz(String currentScreen){
+    public void finishQuiz(String currentScreen, String screenName){
         score = 0;
+        ShapeQuizData.resetCounter();
+        ColorQuizData.resetCounter();
+        AlphabetQuizData.resetCounter();
+        NumberQuizData.resetCounter();
         Intent intent = new Intent(quizimage.this, quizcategory.class);
         intent.putExtra("screen", currentScreen);
         startActivity(intent);
 
+    }
+    public void generateColorQuestion(String currentScreen, String screenName) {
+        int counterColor = new ColorQuizData().questionCounterColor();
+
+        if(counterColor >= ColorQuizData.COLOR_QUESTION_NAMES.length) {
+            finishQuiz(currentScreen, screenName);
+            return;
+        }
+
+        ColorQuestion question = new ColorQuizData().getOneQuestion(ColorQuizData.COLOR_QUESTION_NAMES[counterColor]);
+        quizQuestionImage.setImageResource(question.getImageViewQuestion());
+        for (int i = 0; i < imageButtons.length; i++) {
+            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+            if (i == 0) {
+                imageButtons[i].setImageResource(question.getOtherAnswer1());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 1) {
+                imageButtons[i].setImageResource(question.getOtherAnswer2());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 2) {
+                imageButtons[i].setImageResource(question.getOtherAnswer3());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 3) {
+                imageButtons[i].setImageResource(question.getCorAnswer());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+        }
+    }
+
+    public void generateAlphabetQuestion(String currentScreen, String screenName) {
+        int counterAlphabet = new AlphabetQuizData().questionCounterAlphabet();
+
+        if(counterAlphabet >= AlphabetQuizData.ALPHABET_QUESTION_NAMES.length) {
+            finishQuiz(currentScreen, screenName);
+            return;
+        }
+
+        AlphabetQuestion question = new AlphabetQuizData().getOneAlphabetQuestion(AlphabetQuizData.ALPHABET_QUESTION_NAMES[counterAlphabet]);
+
+        System.out.println(question.getCorrectAnswer());
+
+        quizQuestionImage.setImageResource(question.getImageViewQuestion());
+
+        for (int i = 0; i < imageButtons.length; i++) {
+            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+            if (i == 0) {
+                imageButtons[i].setImageResource(question.getOtherAnswer1());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 1) {
+                imageButtons[i].setImageResource(question.getOtherAnswer2());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 2) {
+                imageButtons[i].setImageResource(question.getOtherAnswer3());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 3) {
+                imageButtons[i].setImageResource(question.getCorAnswer());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+        }
+    }
+
+    public void generateNumberQuestion(String currentScreen, String screenName) {
+        int counterNumber = new NumberQuizData().questionCounterNumber();
+
+        if(counterNumber >= NumberQuizData.NUMBER_QUESTION_NAMES.length) {
+            finishQuiz(currentScreen, screenName);
+            return;
+        }
+
+        NumberQuestion question = new NumberQuizData().getOneQuestion(NumberQuizData.NUMBER_QUESTION_NAMES[counterNumber]);
+        quizQuestionImage.setImageResource(question.getImageViewQuestion());
+
+        for (int i = 0; i < imageButtons.length; i++) {
+            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+            if (i == 0) {
+                imageButtons[i].setImageResource(question.getOtherAnswer1());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 1) {
+                imageButtons[i].setImageResource(question.getOtherAnswer2());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 2) {
+                imageButtons[i].setImageResource(question.getOtherAnswer3());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+            if (i == 3) {
+                imageButtons[i].setImageResource(question.getCorAnswer());
+                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+            }
+        }
     }
 }
