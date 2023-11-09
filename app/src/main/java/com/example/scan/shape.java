@@ -38,28 +38,28 @@ public class shape extends AppCompatActivity {
         btnstar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.star, R.string.txt_star, R.raw.star, new videoRaw().getVideoRaw(getPackageName(),R.raw.videostar)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgstar, R.string.txt_star, R.raw.star, new videoRaw().getVideoRaw(getPackageName(),R.raw.videostar)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btnsquare = findViewById(R.id.btnsquare);
         btnsquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.square, R.string.txt_square, R.raw.square, new videoRaw().getVideoRaw(getPackageName(),R.raw.videosquare)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgsquare, R.string.txt_square, R.raw.square, new videoRaw().getVideoRaw(getPackageName(),R.raw.videosquare)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btncircle = findViewById(R.id.btncircle);
         btncircle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.circle, R.string.txt_circle, R.raw.circle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videocircle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgcircle, R.string.txt_circle, R.raw.circle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videocircle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btnrectangle = findViewById(R.id.btnrectangle);
         btnrectangle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.rectangle, R.string.txt_rectangle, R.raw.rectangle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videorectangle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgrectangle, R.string.txt_rectangle, R.raw.rectangle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videorectangle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         //btndiamond = findViewById(R.id.btndiamond);
@@ -73,21 +73,21 @@ public class shape extends AppCompatActivity {
         btntriangle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.triangle, R.string.txt_triangle, R.raw.triangle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videotriangle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgtriangle, R.string.txt_triangle, R.raw.triangle, new videoRaw().getVideoRaw(getPackageName(),R.raw.videotriangle)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btnheart = findViewById(R.id.btnheart);
         btnheart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.heart, R.string.txt_heart, R.raw.heart, new videoRaw().getVideoRaw(getPackageName(),R.raw.videoheart)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgheart, R.string.txt_heart, R.raw.heart, new videoRaw().getVideoRaw(getPackageName(),R.raw.videoheart)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btnoval = findViewById(R.id.btnoval);
         btnoval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.oval, R.string.txt_oval, R.raw.oval, new videoRaw().getVideoRaw(getPackageName(),R.raw.videooval)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.imgoval, R.string.txt_oval, R.raw.oval, new videoRaw().getVideoRaw(getPackageName(),R.raw.videooval)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
     }

@@ -49,7 +49,11 @@ public class quizimage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizimage);
 
+        new ShapeQuizData().setShapeQuestion();
+        new ColorQuizData().setColorQuestion();
         new AlphabetQuizData().setAlphabetQuestion();
+        new NumberQuizData().setNumberQuestion();
+
 
         button = findViewById(R.id.btnback);
         Intent svc = new Intent(this, bgService.class);
@@ -69,6 +73,7 @@ public class quizimage extends AppCompatActivity {
                 ColorQuizData.resetCounter();
                 AlphabetQuizData.resetCounter();
                 NumberQuizData.resetCounter();
+
             }
         });
 
@@ -89,14 +94,21 @@ public class quizimage extends AppCompatActivity {
     }
 
     public void generateShapeQuestion(String currentScreen, String screenName) {
-        int counterShape = new ShapeQuizData().questionCounterShape();
+        try {
+            if(ShapeQuizData.QUIZ_INITIAL_VISIT){
+                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(), QuizDialog.TAG);
+                ShapeQuizData.QUIZ_INITIAL_VISIT = false;
+            }
+            int counterShape = new ShapeQuizData().questionCounterShape();
 
-        if(counterShape >= ShapeQuizData.SHAPE_QUESTION_NAMES.length) {
-          finishQuiz(currentScreen, screenName);
-          return;
-        }
+            if(counterShape >= ShapeQuizData.SHAPE_QUESTION_NAMES.length) {
+                finishQuiz(currentScreen, screenName);
+                return;
+            }
 
-        ShapeQuestion question = new ShapeQuizData().getOneQuestion(ShapeQuizData.SHAPE_QUESTION_NAMES[counterShape]);
+            ShapeQuestion question = new ShapeQuizData().getOneShapeQuestion(ShapeQuizData.SHAPE_QUESTION_NAMES[counterShape]);
+
+            System.out.println(question.getCorrectAnswer());
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
@@ -117,6 +129,10 @@ public class quizimage extends AppCompatActivity {
                     targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
                 }
             }
+        }catch (Exception e){
+            finishQuiz(currentScreen, screenName);
+        }
+
     }
 
     public void targetCorrectAnswer(int indexButton, int indexCorrectAnswer, ImageButton btn, String currentScreen, String screenName){
@@ -133,15 +149,19 @@ public class quizimage extends AppCompatActivity {
 
                 if(screenName.equals("Shape")){
                     generateShapeQuestion(currentScreen, screenName);
+                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Color")){
                     generateColorQuestion(currentScreen, screenName);
+                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Alphabet")){
                     generateAlphabetQuestion(currentScreen, screenName);
+                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Number")){
                     generateNumberQuestion(currentScreen, screenName);
+                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
             }
         });
@@ -153,106 +173,137 @@ public class quizimage extends AppCompatActivity {
         ColorQuizData.resetCounter();
         AlphabetQuizData.resetCounter();
         NumberQuizData.resetCounter();
-        Intent intent = new Intent(quizimage.this, quizcategory.class);
+        Intent intent = new Intent(quizimage.this, quizhistory.class);
         intent.putExtra("screen", currentScreen);
         startActivity(intent);
 
     }
     public void generateColorQuestion(String currentScreen, String screenName) {
-        int counterColor = new ColorQuizData().questionCounterColor();
 
-        if(counterColor >= ColorQuizData.COLOR_QUESTION_NAMES.length) {
+        try{
+            if(ColorQuizData.QUIZ_INITIAL_VISIT){
+                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                ColorQuizData.QUIZ_INITIAL_VISIT = false;
+            }
+            int counterColor = new ColorQuizData().questionCounterColor();
+
+            if(counterColor >= ColorQuizData.COLOR_QUESTION_NAMES.length) {
+                finishQuiz(currentScreen, screenName);
+                return;
+            }
+
+            ColorQuestion question = new ColorQuizData().getOneColorQuestion(ColorQuizData.COLOR_QUESTION_NAMES[counterColor]);
+            System.out.println(question.getCorrectAnswer());
+            quizQuestionImage.setImageResource(question.getImageViewQuestion());
+            for (int i = 0; i < imageButtons.length; i++) {
+                imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+                if (i == 0) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer1());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 1) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer2());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 2) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer3());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 3) {
+                    imageButtons[i].setImageResource(question.getCorAnswer());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+            }
+
+        }catch (Exception e){
             finishQuiz(currentScreen, screenName);
-            return;
         }
 
-        ColorQuestion question = new ColorQuizData().getOneQuestion(ColorQuizData.COLOR_QUESTION_NAMES[counterColor]);
-        quizQuestionImage.setImageResource(question.getImageViewQuestion());
-        for (int i = 0; i < imageButtons.length; i++) {
-            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
-            if (i == 0) {
-                imageButtons[i].setImageResource(question.getOtherAnswer1());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 1) {
-                imageButtons[i].setImageResource(question.getOtherAnswer2());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 2) {
-                imageButtons[i].setImageResource(question.getOtherAnswer3());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 3) {
-                imageButtons[i].setImageResource(question.getCorAnswer());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-        }
     }
 
     public void generateAlphabetQuestion(String currentScreen, String screenName) {
-        int counterAlphabet = new AlphabetQuizData().questionCounterAlphabet();
+        try{
+            if(AlphabetQuizData.QUIZ_INITIAL_VISIT){
+                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                AlphabetQuizData.QUIZ_INITIAL_VISIT = false;
+            }
+            int counterAlphabet = new AlphabetQuizData().questionCounterAlphabet();
 
-        if(counterAlphabet >= AlphabetQuizData.ALPHABET_QUESTION_NAMES.length) {
+            if(counterAlphabet >= AlphabetQuizData.ALPHABET_QUESTION_NAMES.length) {
+                finishQuiz(currentScreen, screenName);
+                return;
+            }
+
+            AlphabetQuestion question = new AlphabetQuizData().getOneAlphabetQuestion(AlphabetQuizData.ALPHABET_QUESTION_NAMES[counterAlphabet]);
+
+            System.out.println(question.getCorrectAnswer());
+
+            quizQuestionImage.setImageResource(question.getImageViewQuestion());
+
+            for (int i = 0; i < imageButtons.length; i++) {
+                imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+                if (i == 0) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer1());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 1) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer2());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 2) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer3());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 3) {
+                    imageButtons[i].setImageResource(question.getCorAnswer());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+            }
+        }catch (Exception e){
             finishQuiz(currentScreen, screenName);
-            return;
         }
 
-        AlphabetQuestion question = new AlphabetQuizData().getOneAlphabetQuestion(AlphabetQuizData.ALPHABET_QUESTION_NAMES[counterAlphabet]);
-
-        System.out.println(question.getCorrectAnswer());
-
-        quizQuestionImage.setImageResource(question.getImageViewQuestion());
-
-        for (int i = 0; i < imageButtons.length; i++) {
-            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
-            if (i == 0) {
-                imageButtons[i].setImageResource(question.getOtherAnswer1());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 1) {
-                imageButtons[i].setImageResource(question.getOtherAnswer2());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 2) {
-                imageButtons[i].setImageResource(question.getOtherAnswer3());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 3) {
-                imageButtons[i].setImageResource(question.getCorAnswer());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-        }
     }
 
     public void generateNumberQuestion(String currentScreen, String screenName) {
-        int counterNumber = new NumberQuizData().questionCounterNumber();
+        try {
+            if(NumberQuizData.QUIZ_INITIAL_VISIT){
+                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                NumberQuizData.QUIZ_INITIAL_VISIT = false;
+            }
+            int counterNumber = new NumberQuizData().questionCounterNumber();
 
-        if(counterNumber >= NumberQuizData.NUMBER_QUESTION_NAMES.length) {
+            if(counterNumber >= NumberQuizData.NUMBER_QUESTION_NAMES.length) {
+                finishQuiz(currentScreen, screenName);
+                return;
+            }
+
+            NumberQuestion question = new NumberQuizData().getOneNumberQuestion(NumberQuizData.NUMBER_QUESTION_NAMES[counterNumber]);
+
+            System.out.println(question.getCorrectAnswer());
+            quizQuestionImage.setImageResource(question.getImageViewQuestion());
+
+            for (int i = 0; i < imageButtons.length; i++) {
+                imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
+                if (i == 0) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer1());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 1) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer2());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 2) {
+                    imageButtons[i].setImageResource(question.getOtherAnswer3());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+                if (i == 3) {
+                    imageButtons[i].setImageResource(question.getCorAnswer());
+                    targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
+                }
+            }
+        }catch (Exception e){
             finishQuiz(currentScreen, screenName);
-            return;
-        }
-
-        NumberQuestion question = new NumberQuizData().getOneQuestion(NumberQuizData.NUMBER_QUESTION_NAMES[counterNumber]);
-        quizQuestionImage.setImageResource(question.getImageViewQuestion());
-
-        for (int i = 0; i < imageButtons.length; i++) {
-            imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
-            if (i == 0) {
-                imageButtons[i].setImageResource(question.getOtherAnswer1());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 1) {
-                imageButtons[i].setImageResource(question.getOtherAnswer2());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 2) {
-                imageButtons[i].setImageResource(question.getOtherAnswer3());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
-            if (i == 3) {
-                imageButtons[i].setImageResource(question.getCorAnswer());
-                targetCorrectAnswer(i, question.getCorrectAnswerPosition(), imageButtons[i], currentScreen, screenName);
-            }
         }
     }
 }

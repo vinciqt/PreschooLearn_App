@@ -3,18 +3,23 @@ package com.example.scan.quizData;
 import com.example.scan.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Random;
 
 
 public class NumberQuizData {
 
     public static HashMap<String, NumberQuestion> hashMapQuestion = new HashMap<String, NumberQuestion>();
     public static int NUMBER_QUESTION_SIZE = 9;
+    public static boolean QUIZ_INITIAL_VISIT = true;
     public static int NUMBER_QUESTION_COUNTER = -1;
     public static String[] NUMBER_QUESTION_NAMES = {
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
     };
 
+    public static Random rand = new Random();
+    public static int[] randomNumbers;
 
     public HashMap<String, NumberQuestion> createNumberQuizQuestion(int _imageViewQuestion, String _correctAnswer, int _correctAnswerPosition, int _otherAnswer1, int _otherAnswer2, int _otherAnswer3, int _corAnswer) {
 
@@ -23,30 +28,39 @@ public class NumberQuizData {
         return hashMapQuestion;
     }
 
-    public NumberQuestion getOneQuestion(String keyName) {
-        createNumberQuizQuestion(R.drawable.imgsquare, "1", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgstar, "2", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgoval, "3", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgheart, "4", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart);
-        createNumberQuizQuestion(R.drawable.imgtriangle, "5", 1, R.drawable.imgcircle, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgcircle, "6", 0, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgrectangle, "7", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgrectangle, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgsquare, "8", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgstar, "9", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createNumberQuizQuestion(R.drawable.imgoval, "10", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
+    public void setNumberQuestion() {
+        System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
+        randomNumbers=  rand.ints(0, NUMBER_QUESTION_NAMES.length).distinct().limit(NUMBER_QUESTION_NAMES.length).toArray();
+        createNumberQuizQuestion(R.drawable.quizonecookie, "1", 3, R.drawable.numbernine, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numberone);
+        createNumberQuizQuestion(R.drawable.quiztwoperson, "2", 0, R.drawable.numbertwo, R.drawable.numberone, R.drawable.numberfour, R.drawable.numberseven);
+        createNumberQuizQuestion(R.drawable.quizthreerobot, "3", 1, R.drawable.numbersix, R.drawable.numberthree, R.drawable.numbereight, R.drawable.numbertwo);
+        createNumberQuizQuestion(R.drawable.quizfourdino, "4", 2, R.drawable.numberone, R.drawable.numberfive, R.drawable.numberfour, R.drawable.numberten);
+        createNumberQuizQuestion(R.drawable.quizfiveghost, "5", 1, R.drawable.numbertwo, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numbersix);
+        createNumberQuizQuestion(R.drawable.quizsixwizard, "6", 0, R.drawable.numbersix, R.drawable.numbereight, R.drawable.numbernine, R.drawable.numberten);
+        createNumberQuizQuestion(R.drawable.quizsevenwitches, "7", 2, R.drawable.numberone, R.drawable.numberthree, R.drawable.numberseven, R.drawable.numbersix);
+        createNumberQuizQuestion(R.drawable.quizeightbees, "8", 3, R.drawable.numberten, R.drawable.numbertwo, R.drawable.numberthree, R.drawable.numbereight);
+        createNumberQuizQuestion(R.drawable.quizninebirds, "9", 0, R.drawable.numbernine, R.drawable.numberthree, R.drawable.numberfour, R.drawable.numberfive);
+        createNumberQuizQuestion(R.drawable.quiztenufo, "10", 1, R.drawable.numberseven, R.drawable.numberten, R.drawable.numberthree, R.drawable.numbertwo);
+
+        System.out.println(hashMapQuestion.size());
+    }
+
+    public NumberQuestion getOneNumberQuestion(String keyName){
         return hashMapQuestion.get(keyName);
+
     }
 
     public int questionCounterNumber(){
         if(NUMBER_QUESTION_COUNTER > NUMBER_QUESTION_NAMES.length){
-            return NUMBER_QUESTION_SIZE;
+            return NUMBER_QUESTION_NAMES.length;
         }
         NUMBER_QUESTION_COUNTER++;
-        return NUMBER_QUESTION_COUNTER;
+        return randomNumbers[NUMBER_QUESTION_COUNTER];
     }
 
     public static void resetCounter () {
         NUMBER_QUESTION_COUNTER = -1;
+        QUIZ_INITIAL_VISIT = true;
     }
 
 }

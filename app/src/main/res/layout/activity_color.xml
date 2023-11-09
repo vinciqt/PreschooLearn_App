@@ -60,7 +60,7 @@
 
             <ImageButton
                 android:id="@+id/btnblue"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
@@ -70,7 +70,6 @@
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
-
 
 
         </LinearLayout>
@@ -85,7 +84,7 @@
             tools:layout_editor_absoluteY="96dp">
             <ImageButton
                 android:id="@+id/btnred"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
@@ -107,7 +106,7 @@
 
             <ImageButton
                 android:id="@+id/btnyellow"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
@@ -133,7 +132,7 @@
             tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btnorange"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
@@ -155,7 +154,7 @@
 
             <ImageButton
                 android:id="@+id/btnviolet"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
@@ -181,7 +180,7 @@
             tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btngreen"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"

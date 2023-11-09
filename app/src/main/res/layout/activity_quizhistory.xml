@@ -12,7 +12,7 @@
         android:id="@+id/imageView6"
         android:layout_width="411dp"
         android:layout_height="608dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:scaleType="centerCrop"
         android:src="@drawable/historybac"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,8 +26,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
             android:id="@+id/btnback"

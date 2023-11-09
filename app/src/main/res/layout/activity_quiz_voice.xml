@@ -8,11 +8,11 @@
     tools:context=".quizvoice">
 
     <ImageView
-        android:layout_width="161dp"
-        android:layout_height="144dp"
+        android:layout_width="224dp"
+        android:layout_height="206dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        android:src="@drawable/square"
+        android:src="@drawable/imgsquare"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

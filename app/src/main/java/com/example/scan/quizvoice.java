@@ -99,6 +99,7 @@ public class quizvoice extends AppCompatActivity {
 
                 ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                 Toast.makeText(getBaseContext(),data.get(0),Toast.LENGTH_LONG).show();
+
                 if (data.get(0).equals("square")){
                     mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.amazing);
                     mediaplayer.start();
