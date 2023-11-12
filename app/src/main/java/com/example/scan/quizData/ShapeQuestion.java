@@ -12,7 +12,10 @@ public class ShapeQuestion {
 
     public int corAnswer;
 
-    public ShapeQuestion(int _imageViewQuestion, String _correctAnswer, int _correctAnswerPosition, int _otherAnswer1, int _otherAnswer2, int _otherAnswer3, int _corAnswer){
+    public int soundQuestion;
+
+    public ShapeQuestion(int _imageViewQuestion, String _correctAnswer, int _correctAnswerPosition,
+                         int _otherAnswer1, int _otherAnswer2, int _otherAnswer3, int _corAnswer, int _soundQuestion){
         this.imageViewQuestion = _imageViewQuestion;
         this.correctAnswer = _correctAnswer;
         this.correctAnswerPosition = _correctAnswerPosition;
@@ -20,6 +23,7 @@ public class ShapeQuestion {
         this.otherAnswer2 = _otherAnswer2;
         this.otherAnswer3 = _otherAnswer3;
         this.corAnswer = _corAnswer;
+        this.soundQuestion = _soundQuestion;
     }
 
     public int getImageViewQuestion() {
@@ -48,5 +52,9 @@ public class ShapeQuestion {
 
     public int getCorAnswer()  {
         return corAnswer;
+    }
+
+    public int getSoundQuestion() {
+        return soundQuestion;
     }
 }

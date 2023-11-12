@@ -2,7 +2,6 @@ package com.example.scan.quizData;
 
 import com.example.scan.R;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
@@ -32,32 +31,32 @@ public class AlphabetQuizData {
     public void setAlphabetQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers =  rand.ints(0, ALPHABET_QUESTION_NAMES.length).distinct().limit(ALPHABET_QUESTION_NAMES.length).toArray();
-        createAlphabetQuizQuestion(R.drawable.lettera, "A", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterb, "B", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterc, "C", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterd, "D", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart);
-        createAlphabetQuizQuestion(R.drawable.lettere, "E", 1, R.drawable.imgcircle, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterf, "F", 0, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterg, "G", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgrectangle, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterh, "H", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letteri, "I", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterj, "J", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterk, "K", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart);
-        createAlphabetQuizQuestion(R.drawable.letterl, "L", 1, R.drawable.imgcircle, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterm, "M", 0, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.lettern, "N", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgrectangle, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.lettero, "O", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterp, "P", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterq, "Q", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterr, "R", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart);
-        createAlphabetQuizQuestion(R.drawable.letters, "S", 1, R.drawable.imgcircle, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.lettert, "T", 0, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letteru, "U", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgrectangle, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterv, "V", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterw, "W", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.letterx, "X", 1, R.drawable.imgcircle, R.drawable.imgoval, R.drawable.imgoval, R.drawable.imgsquare);
-        createAlphabetQuizQuestion(R.drawable.lettery, "Y", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart);
-        createAlphabetQuizQuestion(R.drawable.letterz, "Z", 1, R.drawable.imgcircle, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizant, "A", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.lettera);
+        createAlphabetQuizQuestion(R.drawable.quizalphabee, "B", 0, R.drawable.letterb, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizcat, "C", 1, R.drawable.imgcircle, R.drawable.letterc, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizdog, "D", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.letterd);
+        createAlphabetQuizQuestion(R.drawable.quizalphaegg, "E", 1, R.drawable.imgcircle, R.drawable.lettere, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizfrog, "F", 0, R.drawable.letterf, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizgoat, "G", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.letterg, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizalphaheart, "H", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.letterh);
+        createAlphabetQuizQuestion(R.drawable.quizicecream, "I", 0, R.drawable.letteri, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizjellyfish, "J", 1, R.drawable.imgcircle, R.drawable.letterj, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizkite, "K", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.letterk);
+        createAlphabetQuizQuestion(R.drawable.quizlion, "L", 1, R.drawable.imgcircle, R.drawable.letterl, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizmilk, "M", 0, R.drawable.letterm, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quiznest, "N", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.lettern, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizoctopus, "O", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.lettero);
+        createAlphabetQuizQuestion(R.drawable.quizpumpkin, "P", 0, R.drawable.letterp, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizqueen, "Q", 1, R.drawable.imgcircle, R.drawable.letterq, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizrobot, "R", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.letterr);
+        createAlphabetQuizQuestion(R.drawable.quizalphastar, "S", 1, R.drawable.imgcircle, R.drawable.letters, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quiztrain, "T", 0, R.drawable.lettert, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizambrella, "U", 2, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.letteru, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizvase, "V", 3, R.drawable.imgcircle, R.drawable.imgheart, R.drawable.imgoval, R.drawable.letterv);
+        createAlphabetQuizQuestion(R.drawable.quizworm, "W", 0, R.drawable.letterw, R.drawable.imgheart, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizxylophone, "X", 1, R.drawable.imgcircle, R.drawable.letterx, R.drawable.imgoval, R.drawable.imgsquare);
+        createAlphabetQuizQuestion(R.drawable.quizyoyo, "Y", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.lettery);
+        createAlphabetQuizQuestion(R.drawable.quizzoo, "Z", 1, R.drawable.imgcircle, R.drawable.letterz, R.drawable.imgoval, R.drawable.imgsquare);
 
         System.out.println(hashMapQuestion.size());
     }

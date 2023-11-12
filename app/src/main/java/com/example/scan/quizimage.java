@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.scan.database.QuizScoreDatabaseHelper;
 import com.example.scan.quizData.AlphabetQuestion;
 import com.example.scan.quizData.AlphabetQuizData;
 import com.example.scan.quizData.ColorQuestion;
@@ -20,6 +21,7 @@ import com.example.scan.quizData.NumberQuizData;
 import com.example.scan.quizData.ShapeQuestion;
 import com.example.scan.quizData.ShapeQuizData;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +29,7 @@ import java.util.Map;
 
 public class quizimage extends AppCompatActivity {
 
-    private ImageButton button;
+    private ImageButton button, btnSoundQuestion;
 
     private Button btnqshape, btnqcolor, btnqalphabet, btnqnumber;
 
@@ -42,12 +44,15 @@ public class quizimage extends AppCompatActivity {
     };
 
     private int score = 0;
+    private QuizScoreDatabaseHelper quizScoreDatabaseHelper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizimage);
+
+        quizScoreDatabaseHelper = new QuizScoreDatabaseHelper(this);
 
         new ShapeQuizData().setShapeQuestion();
         new ColorQuizData().setColorQuestion();
@@ -62,6 +67,7 @@ public class quizimage extends AppCompatActivity {
         System.out.println("CHECKKKK" + currentScreen);
 
         quizQuestionImage = findViewById(R.id.imageViewQuestion);
+        btnSoundQuestion = findViewById(R.id.btnSoundQuestion);
         startService(svc); //OR stopService(svc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +116,9 @@ public class quizimage extends AppCompatActivity {
 
             System.out.println(question.getCorrectAnswer());
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
+            triggerSoundQuestion(question.getSoundQuestion());
+
+
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
                 if (i == 0) {
@@ -142,32 +151,42 @@ public class quizimage extends AppCompatActivity {
                 if(indexButton == indexCorrectAnswer){
                     System.out.println("CORRECT");
                     score++;
+                    new QuizDialog("CORRECT").show(getSupportFragmentManager(), QuizDialog.TAG);
 
                 }else{
-                    System.out.println("WRONG");
+                    new QuizDialog("WRONG").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
 
                 if(screenName.equals("Shape")){
                     generateShapeQuestion(currentScreen, screenName);
-                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Color")){
                     generateColorQuestion(currentScreen, screenName);
-                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Alphabet")){
                     generateAlphabetQuestion(currentScreen, screenName);
-                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
                 if(screenName.equals("Number")){
                     generateNumberQuestion(currentScreen, screenName);
-                    new QuizDialog("YO").show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
             }
         });
     }
 
     public void finishQuiz(String currentScreen, String screenName){
+
+        if(screenName.equals("Shape")){
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "SHAPE", Integer.toString(score), LocalDate.now().toString());
+        }
+        if(screenName.equals("Color")){
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "COLOR", Integer.toString(score), LocalDate.now().toString());
+        }
+        if(screenName.equals("Alphabet")){
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "ALPHABET", Integer.toString(score), LocalDate.now().toString());
+        }
+        if(screenName.equals("Number")){
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "NUMBER", Integer.toString(score), LocalDate.now().toString());
+        }
         score = 0;
         ShapeQuizData.resetCounter();
         ColorQuizData.resetCounter();
@@ -195,6 +214,7 @@ public class quizimage extends AppCompatActivity {
             ColorQuestion question = new ColorQuizData().getOneColorQuestion(ColorQuizData.COLOR_QUESTION_NAMES[counterColor]);
             System.out.println(question.getCorrectAnswer());
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
+
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
                 if (i == 0) {
@@ -305,5 +325,15 @@ public class quizimage extends AppCompatActivity {
         }catch (Exception e){
             finishQuiz(currentScreen, screenName);
         }
+    }
+
+    public void triggerSoundQuestion(int sound){
+        final MediaPlayer mp = MediaPlayer.create(this, sound);
+        btnSoundQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp.start();
+            }
+        });
     }
 }
