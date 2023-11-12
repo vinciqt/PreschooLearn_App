@@ -60,12 +60,12 @@
 
                 <ImageButton
                     android:id="@+id/btnsquare"
-                    android:layout_width="230dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/square"
+                    android:src="@drawable/imgsquare"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -85,12 +85,12 @@
             tools:layout_editor_absoluteY="96dp">
             <ImageButton
                 android:id="@+id/btnstar"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/star"
+                android:src="@drawable/imgstar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
         </LinearLayout>
@@ -106,12 +106,12 @@
 
             <ImageButton
                 android:id="@+id/btncircle"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/circle"
+                android:src="@drawable/imgcircle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -132,12 +132,12 @@
             app:layout_constraintStart_toStartOf="parent">
             <ImageButton
                 android:id="@+id/btnrectangle"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/rectangle"
+                android:src="@drawable/imgrectangle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
         </LinearLayout>
@@ -156,12 +156,12 @@
 
             <ImageButton
                 android:id="@+id/btntriangle"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/triangle"
+                android:src="@drawable/imgtriangle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -180,12 +180,12 @@
 
             <ImageButton
                 android:id="@+id/btnheart"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/heart"
+                android:src="@drawable/imgheart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -205,12 +205,12 @@
             tools:layout_editor_absoluteY="96dp">
             <ImageButton
                 android:id="@+id/btnoval"
-                android:layout_width="230dp"
+                android:layout_width="wrap_content"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/oval"
+                android:src="@drawable/imgoval"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
         </LinearLayout>
