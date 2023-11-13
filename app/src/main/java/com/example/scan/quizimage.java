@@ -102,7 +102,7 @@ public class quizimage extends AppCompatActivity {
     public void generateShapeQuestion(String currentScreen, String screenName) {
         try {
             if(ShapeQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(), QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(), QuizDialog.TAG);
                 ShapeQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterShape = new ShapeQuizData().questionCounterShape();
@@ -151,10 +151,10 @@ public class quizimage extends AppCompatActivity {
                 if(indexButton == indexCorrectAnswer){
                     System.out.println("CORRECT");
                     score++;
-                    new QuizDialog("CORRECT").show(getSupportFragmentManager(), QuizDialog.TAG);
+                    new QuizDialog("CORRECT", false).show(getSupportFragmentManager(), QuizDialog.TAG);
 
                 }else{
-                    new QuizDialog("WRONG").show(getSupportFragmentManager(), QuizDialog.TAG);
+                    new QuizDialog("WRONG", false).show(getSupportFragmentManager(), QuizDialog.TAG);
                 }
 
                 if(screenName.equals("Shape")){
@@ -176,16 +176,16 @@ public class quizimage extends AppCompatActivity {
     public void finishQuiz(String currentScreen, String screenName){
 
         if(screenName.equals("Shape")){
-            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "SHAPE", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "SHAPE", Integer.toString(score), LocalDate.now().toString(), Integer.toString(ShapeQuizData.SHAPE_QUESTION_NAMES.length));
         }
         if(screenName.equals("Color")){
-            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "COLOR", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "COLOR", Integer.toString(score), LocalDate.now().toString(), Integer.toString((ColorQuizData.COLOR_QUESTION_NAMES.length)));
         }
         if(screenName.equals("Alphabet")){
-            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "ALPHABET", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "ALPHABET", Integer.toString(score), LocalDate.now().toString(), Integer.toString(AlphabetQuizData.ALPHABET_QUESTION_NAMES.length));
         }
         if(screenName.equals("Number")){
-            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "NUMBER", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("IMAGE", "NUMBER", Integer.toString(score), LocalDate.now().toString(), Integer.toString(NumberQuizData.NUMBER_QUESTION_NAMES.length));
         }
         score = 0;
         ShapeQuizData.resetCounter();
@@ -201,7 +201,7 @@ public class quizimage extends AppCompatActivity {
 
         try{
             if(ColorQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 ColorQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterColor = new ColorQuizData().questionCounterColor();
@@ -244,7 +244,7 @@ public class quizimage extends AppCompatActivity {
     public void generateAlphabetQuestion(String currentScreen, String screenName) {
         try{
             if(AlphabetQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 AlphabetQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterAlphabet = new AlphabetQuizData().questionCounterAlphabet();
@@ -288,7 +288,7 @@ public class quizimage extends AppCompatActivity {
     public void generateNumberQuestion(String currentScreen, String screenName) {
         try {
             if(NumberQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 NumberQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterNumber = new NumberQuizData().questionCounterNumber();

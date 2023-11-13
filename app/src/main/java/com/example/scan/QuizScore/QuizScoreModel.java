@@ -9,6 +9,8 @@ public class QuizScoreModel {
     private String quizScore;
     private String quizDate;
 
+    private String quizScoreOverallCount;
+
 
     public int getQuizId() {
         return quizId;
@@ -51,12 +53,21 @@ public class QuizScoreModel {
     }
 
 
-    public QuizScoreModel(int _quizId, String _quizCategory, String _quizType, String _quizScore, String _quizDate){
+    public String getQuizScoreOverallCount() {
+        return quizScoreOverallCount;
+    }
+
+    public void setQuizScoreOverallCount(String quizScoreOverallCount) {
+        this.quizScoreOverallCount = quizScoreOverallCount;
+    }
+
+    public QuizScoreModel(int _quizId, String _quizCategory, String _quizType, String _quizScore, String _quizDate, String _quizScoreOverallCount){
         this.quizId = _quizId;
         this.quizCategory = _quizCategory;
         this.quizType = _quizType;
         this.quizScore = _quizScore;
         this.quizDate = _quizDate;
+        this.quizScoreOverallCount = _quizScoreOverallCount;
     }
 
 

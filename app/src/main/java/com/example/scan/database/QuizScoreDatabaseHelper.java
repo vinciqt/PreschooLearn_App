@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
 
     public static String DATABASE_NAME = "quiz_score_db";
-    private static int DATABASE_VERSION = 2;
+    private static int DATABASE_VERSION = 3;
 
     private static final String QUIZ_SCORE_TABLE = "quiz_score_table";
     private static final String KEY_ID = "quiz_id";
@@ -27,11 +27,14 @@ public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_QUIZ_SCORE = "quiz_score";
     private static final String KEY_QUIZ_DATE = "quiz_date";
 
+    private static final String KEY_QUIZ_COUNT_OVERALL = "quiz_count_overall";
+
     private static final String CREATE_TABLE = "CREATE TABLE " +
             QUIZ_SCORE_TABLE + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             KEY_QUIZ_CATEGORY + " TEXT NOT NULL," +
             KEY_QUIZ_TYPE + " TEXT NOT NULL," +
             KEY_QUIZ_SCORE + " TEXT NOT NULL," +
+            KEY_QUIZ_COUNT_OVERALL + " TEXT NOT NULL, " +
             KEY_QUIZ_DATE + " TEXT NOT NULL " + ");";
 
     public QuizScoreDatabaseHelper(Context context){
@@ -50,7 +53,7 @@ public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public long insertQuizScore(String quizCategory, String quizType, String quizScore, String quizDate){
+    public long insertQuizScore(String quizCategory, String quizType, String quizScore, String quizDate, String quizScoreOverAll){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values  = new ContentValues();
 
@@ -58,6 +61,7 @@ public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
         values.put(KEY_QUIZ_TYPE, quizType);
         values.put(KEY_QUIZ_SCORE, quizScore);
         values.put(KEY_QUIZ_DATE, quizDate);
+        values.put(KEY_QUIZ_COUNT_OVERALL, quizScoreOverAll);
         long insert = db.insert(QUIZ_SCORE_TABLE, null, values);
 
         String query = "SELECT * FROM " + QUIZ_SCORE_TABLE;
@@ -80,8 +84,9 @@ public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
                 @SuppressLint("Range") String quizType = c.getString(c.getColumnIndex(KEY_QUIZ_TYPE));
                 @SuppressLint("Range") String quizScore = c.getString(c.getColumnIndex(KEY_QUIZ_SCORE));
                 @SuppressLint("Range") String quizDate = c.getString(c.getColumnIndex(KEY_QUIZ_DATE));
+                @SuppressLint("Range") String quizScoreOverall = c.getString(c.getColumnIndex(KEY_QUIZ_COUNT_OVERALL));
 
-                QuizScoreModel quizScoreModel = new QuizScoreModel(id, quizCategory,quizType, quizScore, quizDate );
+                QuizScoreModel quizScoreModel = new QuizScoreModel(id, quizCategory,quizType, quizScore, quizDate, quizScoreOverall);
                 quizScoreModelArrayList.add(quizScoreModel);
 
             } while(c.moveToNext());

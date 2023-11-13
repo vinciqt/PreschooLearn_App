@@ -31,16 +31,16 @@ public class NumberQuizData {
     public void setNumberQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers=  rand.ints(0, NUMBER_QUESTION_NAMES.length).distinct().limit(NUMBER_QUESTION_NAMES.length).toArray();
-        createNumberQuizQuestion(R.drawable.quizonecookie, "1", 3, R.drawable.numbernine, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numberone);
-        createNumberQuizQuestion(R.drawable.quiztwoperson, "2", 0, R.drawable.numbertwo, R.drawable.numberone, R.drawable.numberfour, R.drawable.numberseven);
-        createNumberQuizQuestion(R.drawable.quizthreerobot, "3", 1, R.drawable.numbersix, R.drawable.numberthree, R.drawable.numbereight, R.drawable.numbertwo);
-        createNumberQuizQuestion(R.drawable.quizfourdino, "4", 2, R.drawable.numberone, R.drawable.numberfive, R.drawable.numberfour, R.drawable.numberten);
-        createNumberQuizQuestion(R.drawable.quizfiveghost, "5", 1, R.drawable.numbertwo, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numbersix);
-        createNumberQuizQuestion(R.drawable.quizsixwizard, "6", 0, R.drawable.numbersix, R.drawable.numbereight, R.drawable.numbernine, R.drawable.numberten);
-        createNumberQuizQuestion(R.drawable.quizsevenwitches, "7", 2, R.drawable.numberone, R.drawable.numberthree, R.drawable.numberseven, R.drawable.numbersix);
-        createNumberQuizQuestion(R.drawable.quizeightbees, "8", 3, R.drawable.numberten, R.drawable.numbertwo, R.drawable.numberthree, R.drawable.numbereight);
-        createNumberQuizQuestion(R.drawable.quizninebirds, "9", 0, R.drawable.numbernine, R.drawable.numberthree, R.drawable.numberfour, R.drawable.numberfive);
-        createNumberQuizQuestion(R.drawable.quiztenufo, "10", 1, R.drawable.numberseven, R.drawable.numberten, R.drawable.numberthree, R.drawable.numbertwo);
+        createNumberQuizQuestion(R.drawable.quiz_cookie, "1", 3, R.drawable.numbernine, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numberone);
+        createNumberQuizQuestion(R.drawable.quiz_persons, "2", 0, R.drawable.numbertwo, R.drawable.numberone, R.drawable.numberfour, R.drawable.numberseven);
+        createNumberQuizQuestion(R.drawable.quiz_robots, "3", 1, R.drawable.numbersix, R.drawable.numberthree, R.drawable.numbereight, R.drawable.numbertwo);
+        createNumberQuizQuestion(R.drawable.quiz_dinos, "4", 2, R.drawable.numberone, R.drawable.numberfive, R.drawable.numberfour, R.drawable.numberten);
+        createNumberQuizQuestion(R.drawable.quiz_ghosts, "5", 1, R.drawable.numbertwo, R.drawable.numberfive, R.drawable.numberseven, R.drawable.numbersix);
+        createNumberQuizQuestion(R.drawable.quiz_wizards, "6", 0, R.drawable.numbersix, R.drawable.numbereight, R.drawable.numbernine, R.drawable.numberten);
+        createNumberQuizQuestion(R.drawable.quiz_witches, "7", 2, R.drawable.numberone, R.drawable.numberthree, R.drawable.numberseven, R.drawable.numbersix);
+        createNumberQuizQuestion(R.drawable.quiz_bees, "8", 3, R.drawable.numberten, R.drawable.numbertwo, R.drawable.numberthree, R.drawable.numbereight);
+        createNumberQuizQuestion(R.drawable.quiz_parrots, "9", 0, R.drawable.numbernine, R.drawable.numberthree, R.drawable.numberfour, R.drawable.numberfive);
+        createNumberQuizQuestion(R.drawable.quiz_ufos, "10", 1, R.drawable.numberseven, R.drawable.numberten, R.drawable.numberthree, R.drawable.numbertwo);
 
         System.out.println(hashMapQuestion.size());
     }

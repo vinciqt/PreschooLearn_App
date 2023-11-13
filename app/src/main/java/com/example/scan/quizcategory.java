@@ -21,19 +21,11 @@ public class quizcategory extends AppCompatActivity {
 
     private Button btnqshape, btnqcolor, btnqalphabet, btnqnumber;
 
-    private QuizScoreDatabaseHelper quizScoreDatabaseHelper;
-    private ArrayList<QuizScoreModel> quizModelArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizcategory);
-
-        quizScoreDatabaseHelper = new QuizScoreDatabaseHelper(this);
-
-        quizModelArrayList = quizScoreDatabaseHelper.getAllQuiz();
-
-        System.out.println("SAMPLE " + quizModelArrayList.get(0).getQuizCategory());
 
 
         button = findViewById(R.id.btnback);

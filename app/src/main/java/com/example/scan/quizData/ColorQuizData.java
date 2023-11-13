@@ -34,12 +34,12 @@ public class ColorQuizData {
     public void setColorQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers = rand.ints(0, COLOR_QUESTION_NAMES.length).distinct().limit(COLOR_QUESTION_NAMES.length).toArray();
-        createColorQuizQuestion(R.drawable.quizblue, "Blue", 3, R.drawable.red, R.drawable.violet, R.drawable.green, R.drawable.blue);
-        createColorQuizQuestion(R.drawable.quizviolet, "Violet", 0, R.drawable.violet, R.drawable.yellow, R.drawable.orange, R.drawable.green);
-        createColorQuizQuestion(R.drawable.quizred, "Red", 1, R.drawable.blue, R.drawable.red, R.drawable.orange, R.drawable.yellow);
-        createColorQuizQuestion(R.drawable.quizgreen, "Green", 3, R.drawable.red, R.drawable.blue, R.drawable.violet, R.drawable.green);
-        createColorQuizQuestion(R.drawable.quizorange, "Orange", 1, R.drawable.blue, R.drawable.orange, R.drawable.green, R.drawable.red);
-        createColorQuizQuestion(R.drawable.quizyellow, "Yellow", 0, R.drawable.yellow, R.drawable.blue, R.drawable.orange, R.drawable.red);
+        createColorQuizQuestion(R.drawable.quiz_dolphin, "Blue", 3, R.drawable.red, R.drawable.violet, R.drawable.green, R.drawable.blue);
+        createColorQuizQuestion(R.drawable.quiz_eggplant, "Violet", 0, R.drawable.violet, R.drawable.yellow, R.drawable.orange, R.drawable.green);
+        createColorQuizQuestion(R.drawable.quiz_apple, "Red", 1, R.drawable.blue, R.drawable.red, R.drawable.orange, R.drawable.yellow);
+        createColorQuizQuestion(R.drawable.quiz_parrot, "Green", 3, R.drawable.red, R.drawable.blue, R.drawable.violet, R.drawable.green);
+        createColorQuizQuestion(R.drawable.quiz_ball, "Orange", 1, R.drawable.blue, R.drawable.orange, R.drawable.green, R.drawable.red);
+        createColorQuizQuestion(R.drawable.quiz_banana, "Yellow", 0, R.drawable.yellow, R.drawable.blue, R.drawable.orange, R.drawable.red);
 
         System.out.println(hashMapQuestion.size());
     }

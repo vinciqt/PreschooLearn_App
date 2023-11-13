@@ -54,7 +54,7 @@ public class QuizScoreAdapter extends BaseAdapter {
 
         holder.quizCategory.setText(quizScoreModelArrayList.get(position).getQuizCategory());
         holder.quizType.setText(quizScoreModelArrayList.get(position).getQuizType());
-        holder.quizScore.setText(quizScoreModelArrayList.get(position).getQuizScore());
+        holder.quizScore.setText(quizScoreModelArrayList.get(position).getQuizScore() + "/" + quizScoreModelArrayList.get(position).getQuizScoreOverallCount());
         holder.quizDate.setText(quizScoreModelArrayList.get(position).getQuizDate());
 
         return view;

@@ -251,7 +251,7 @@ public class quizvoice extends AppCompatActivity {
     public void generateShapeQuestion(String currentScreen, String screenName){
         try {
             if(VoiceShapeQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(), QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(), QuizDialog.TAG);
                 VoiceShapeQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterShape = new VoiceShapeQuizData().questionCounterShape();
@@ -275,7 +275,7 @@ public class quizvoice extends AppCompatActivity {
     public void generateColorQuestion(String currentScreen, String screenName){
         try{
             if(VoiceColorQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ",true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 VoiceColorQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterColor = new VoiceColorQuizData().questionCounterColor();
@@ -295,7 +295,7 @@ public class quizvoice extends AppCompatActivity {
     public void generateAlphabetQuestion(String currentScreen, String screenName){
         try{
             if(VoiceAlphabetQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ", true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 VoiceAlphabetQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterAlphabet = new VoiceColorQuizData().questionCounterColor();
@@ -315,7 +315,7 @@ public class quizvoice extends AppCompatActivity {
     public void generateNumberQuestion(String currentScreen, String screenName){
         try{
             if(VoiceNumberQuizData.QUIZ_INITIAL_VISIT){
-                new QuizDialog("LET START THE QUIZ").show(getSupportFragmentManager(),QuizDialog.TAG);
+                new QuizDialog("LET START THE QUIZ",true).show(getSupportFragmentManager(),QuizDialog.TAG);
                 VoiceNumberQuizData.QUIZ_INITIAL_VISIT = false;
             }
             int counterNumber = new VoiceNumberQuizData().questionCounterNumber();
@@ -337,16 +337,16 @@ public class quizvoice extends AppCompatActivity {
 
     public void finishQuiz(String currentScreen, String screenName){
         if(screenName.equals("Shape")){
-            quizScoreDatabaseHelper.insertQuizScore("VOICE", "SHAPE", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("VOICE", "SHAPE", Integer.toString(score), LocalDate.now().toString(), Integer.toString(VoiceShapeQuizData.SHAPE_QUESTION_NAMES.length));
         }
         if(screenName.equals("Color")) {
-            quizScoreDatabaseHelper.insertQuizScore("VOICE", "COLOR", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("VOICE", "COLOR", Integer.toString(score), LocalDate.now().toString(), Integer.toString(VoiceColorQuizData.COLOR_QUESTION_NAMES.length));
         }
         if(screenName.equals("Alphabet")) {
-            quizScoreDatabaseHelper.insertQuizScore("VOICE", "ALPHABET", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("VOICE", "ALPHABET", Integer.toString(score), LocalDate.now().toString(), Integer.toString(VoiceAlphabetQuizData.ALPHABET_QUESTION_NAMES.length));
         }
         if(screenName.equals("Number")){
-            quizScoreDatabaseHelper.insertQuizScore("VOICE", "NUMBER", Integer.toString(score), LocalDate.now().toString());
+            quizScoreDatabaseHelper.insertQuizScore("VOICE", "NUMBER", Integer.toString(score), LocalDate.now().toString(), Integer.toString(VoiceNumberQuizData.NUMBER_QUESTION_NAMES.length));
         }
 
         score = 0;

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#00FFFFFF"
-    android:backgroundTint="#00FFFFFF"
+    android:layout_height="wrap_content"
+    android:background="#BEFDDB56"
+    android:backgroundTintMode="screen"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
-        android:id="@+id/quizMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="34sp" />
+    <ImageView
+        android:id="@+id/quizDialogImg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#00FFFFFF"
+        android:backgroundTintMode="screen"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@drawable/diamond" />
 </LinearLayout>
