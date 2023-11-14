@@ -73,7 +73,7 @@ public class QuizScoreDatabaseHelper extends SQLiteOpenHelper {
     public ArrayList<QuizScoreModel> getAllQuiz(){
         ArrayList<QuizScoreModel> quizScoreModelArrayList = new ArrayList<QuizScoreModel>();
 
-        String getAllQuery = "SELECT * FROM " + QUIZ_SCORE_TABLE;
+        String getAllQuery = "SELECT * FROM " + QUIZ_SCORE_TABLE + " ORDER BY " + KEY_ID + " DESC;";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(getAllQuery, null);
 

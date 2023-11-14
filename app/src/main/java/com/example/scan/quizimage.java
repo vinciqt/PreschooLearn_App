@@ -214,6 +214,7 @@ public class quizimage extends AppCompatActivity {
             ColorQuestion question = new ColorQuizData().getOneColorQuestion(ColorQuizData.COLOR_QUESTION_NAMES[counterColor]);
             System.out.println(question.getCorrectAnswer());
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
+            triggerSoundQuestion(question.getSoundQuestion());
 
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
@@ -255,10 +256,9 @@ public class quizimage extends AppCompatActivity {
             }
 
             AlphabetQuestion question = new AlphabetQuizData().getOneAlphabetQuestion(AlphabetQuizData.ALPHABET_QUESTION_NAMES[counterAlphabet]);
-
             System.out.println(question.getCorrectAnswer());
-
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
+            triggerSoundQuestion(question.getSoundQuestion());
 
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);
@@ -299,9 +299,9 @@ public class quizimage extends AppCompatActivity {
             }
 
             NumberQuestion question = new NumberQuizData().getOneNumberQuestion(NumberQuizData.NUMBER_QUESTION_NAMES[counterNumber]);
-
             System.out.println(question.getCorrectAnswer());
             quizQuestionImage.setImageResource(question.getImageViewQuestion());
+            triggerSoundQuestion(question.getSoundQuestion());
 
             for (int i = 0; i < imageButtons.length; i++) {
                 imageButtons[i] = (ImageButton) findViewById(BUTTON_IDS_CHOICES[i]);

@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,7 +33,7 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginBottom="45dp"
             android:fontFamily="sans-serif-black"
             android:text="QUIZ"
@@ -44,16 +44,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="250dp"
         android:gravity="center_horizontal|fill_vertical"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintTop_toBottomOf="@+id/ll"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <ImageButton
             android:id="@+id/btnSoundQuestion"
@@ -61,7 +57,7 @@
             android:layout_height="91dp"
             android:layout_gravity="bottom|center_vertical"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="75dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="centerCrop"
             android:src="@android:drawable/ic_lock_silent_mode_off"
@@ -73,7 +69,7 @@
         <ImageView
             android:id="@+id/imageViewQuestion"
             android:layout_width="270dp"
-            android:layout_height="190dp"
+            android:layout_height="250dp"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="44dp"
             android:layout_marginBottom="43dp"
@@ -83,16 +79,26 @@
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/view"
+    <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="#5d3122"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="28dp"
+            android:background="#5d3122"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -112,7 +118,7 @@
             android:layout_marginTop="44dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
-            android:src="@drawable/square"
+            android:src="@drawable/imgsquare"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.66"
             app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -126,7 +132,7 @@
             android:layout_marginTop="44dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
-            android:src="@drawable/star"
+            android:src="@drawable/imgstar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll" />
 
@@ -150,7 +156,7 @@
             android:layout_marginTop="44dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
-            android:src="@drawable/dia"
+            android:src="@drawable/imgcircle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.66"
             app:layout_constraintStart_toEndOf="@+id/btnstar"
@@ -164,11 +170,13 @@
             android:layout_marginTop="44dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="fitCenter"
-            android:src="@drawable/triangle"
+            android:src="@drawable/imgtriangle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll" />
 
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

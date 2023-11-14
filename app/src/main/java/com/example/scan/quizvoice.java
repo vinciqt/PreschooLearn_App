@@ -37,6 +37,7 @@ import com.example.scan.voiceData.VoiceShapeQuizData;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 
 public class quizvoice extends AppCompatActivity {
 
@@ -54,7 +55,10 @@ public class quizvoice extends AppCompatActivity {
 
     private int score = 0;
 
+
+
     private QuizScoreDatabaseHelper quizScoreDatabaseHelper;
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -179,12 +183,12 @@ public class quizvoice extends AppCompatActivity {
             @Override
             public void onResults(Bundle bundle) {
 
+
                 ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                 System.out.println("answer " + data.get(0));
                 if (data.get(0).equals(correctAnswer.toLowerCase())){
-                    mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.amazing);
-                    mediaplayer.start();
-
+                    score++;
+                    new QuizDialog("CORRECT", false).show(getSupportFragmentManager(), QuizDialog.TAG);
                     if(screenName.equals("Shape")){
                         generateShapeQuestion(currentScreen, screenName);
                     }
@@ -197,13 +201,10 @@ public class quizvoice extends AppCompatActivity {
                     if(screenName.equals("Number")) {
                         generateNumberQuestion(currentScreen,screenName);
                     }
-                    score++;
+
                 }
                 else {
-                    Toast.makeText(getBaseContext(),"TRY AGAIN",Toast.LENGTH_SHORT).show();
-                    mediaplayer = MediaPlayer.create(quizvoice.this, R.raw.please);
-                    mediaplayer.start();
-
+                    new QuizDialog("WRONG", false).show(getSupportFragmentManager(), QuizDialog.TAG);
                     if(screenName.equals("Shape")){
                         generateShapeQuestion(currentScreen, screenName);
                     }

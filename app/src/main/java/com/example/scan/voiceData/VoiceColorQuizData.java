@@ -29,12 +29,12 @@ public class VoiceColorQuizData {
     public void setColorQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers = rand.ints(0, COLOR_QUESTION_NAMES.length).distinct().limit(COLOR_QUESTION_NAMES.length).toArray();
-        createColorQuizQuestion(R.drawable.quizblue, "Blue");
-        createColorQuizQuestion(R.drawable.quizviolet, "Violet");
-        createColorQuizQuestion(R.drawable.quizred, "Red");
-        createColorQuizQuestion(R.drawable.quizgreen, "Green");
-        createColorQuizQuestion(R.drawable.quizorange, "Orange");
-        createColorQuizQuestion(R.drawable.quizyellow, "Yellow");
+        createColorQuizQuestion(R.drawable.quiz_dolphin, "Blue");
+        createColorQuizQuestion(R.drawable.quiz_eggplant, "Violet");
+        createColorQuizQuestion(R.drawable.quiz_apple, "Red");
+        createColorQuizQuestion(R.drawable.quiz_parrot, "Green");
+        createColorQuizQuestion(R.drawable.quiz_ball, "Orange");
+        createColorQuizQuestion(R.drawable.quiz_banana, "Yellow");
 
         System.out.println(hashMapQuestion.size());
     }

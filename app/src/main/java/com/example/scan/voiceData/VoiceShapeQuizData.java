@@ -33,13 +33,13 @@ public class VoiceShapeQuizData {
     public void setShapeQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers=  rand.ints(0, SHAPE_QUESTION_NAMES.length).distinct().limit(SHAPE_QUESTION_NAMES.length).toArray();
-        createShapeQuizQuestion(R.drawable.quizsquare, "Square");
-        createShapeQuizQuestion(R.drawable.quizstar, "Star");
-        createShapeQuizQuestion(R.drawable.quizoval, "Oval");
-        createShapeQuizQuestion(R.drawable.quizheart, "Heart");
-        createShapeQuizQuestion(R.drawable.quiztriangle, "Triangle");
-        createShapeQuizQuestion(R.drawable.quizcircle, "Circle");
-        createShapeQuizQuestion(R.drawable.quizrectangle, "Rectangle");
+        createShapeQuizQuestion(R.drawable.quiz_chessboard, "Square");
+        createShapeQuizQuestion(R.drawable.quiz_stars, "Star");
+        createShapeQuizQuestion(R.drawable.quiz_eggs, "Oval");
+        createShapeQuizQuestion(R.drawable.quiz_chocoheart, "Heart");
+        createShapeQuizQuestion(R.drawable.quiz_pizza, "Triangle");
+        createShapeQuizQuestion(R.drawable.quiz_clock, "Circle");
+        createShapeQuizQuestion(R.drawable.quiz_door, "Rectangle");
 
         System.out.println(hashMapQuestion.size());
     }
