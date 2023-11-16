@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/newbg"
+    android:background="@drawable/firstpagebg"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:src="@drawable/firstpage"
+        app:layout_constraintBottom_toTopOf="@+id/btnstart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189">
+
+    </ImageView>
 
     <Button
         android:id="@+id/btnstart"
@@ -13,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="#244E0E"
         android:fontFamily="@font/aksi_font"
         android:text="@string/btn_start"
@@ -22,8 +36,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
         app:strokeColor="#633818"
         app:strokeWidth="2dp" />
 

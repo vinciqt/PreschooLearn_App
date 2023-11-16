@@ -53,7 +53,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="230dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/numberone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -78,8 +78,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/numbertwo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -99,8 +99,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -113,7 +113,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/numberthree"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -126,8 +126,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +139,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/numberfour"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -147,8 +147,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -161,7 +161,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/numberfive"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -174,8 +174,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -187,7 +187,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/numbersix"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -195,8 +195,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -209,7 +209,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/numberseven"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -222,8 +222,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -235,7 +235,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/numbereight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -243,8 +243,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -257,7 +257,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/numbernine"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -269,8 +269,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -282,7 +282,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/numberten"
                 app:layout_constraintStart_toStartOf="parent"

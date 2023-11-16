@@ -37,13 +37,13 @@ public class ShapeQuizData {
     public void setShapeQuestion() {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers=  rand.ints(0, SHAPE_QUESTION_NAMES.length).distinct().limit(SHAPE_QUESTION_NAMES.length).toArray();
-        createShapeQuizQuestion(R.drawable.quiz_chessboard, "Square", 3, R.drawable.imgrectangle, R.drawable.imgoval, R.drawable.imgheart, R.drawable.imgsquare, R.raw.square);
-        createShapeQuizQuestion(R.drawable.quiz_stars, "Star", 0, R.drawable.imgstar, R.drawable.imgheart, R.drawable.imgtriangle, R.drawable.imgrectangle, R.raw.star);
-        createShapeQuizQuestion(R.drawable.quiz_eggs, "Oval", 1, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgstar, R.drawable.imgcircle, R.raw.oval);
-        createShapeQuizQuestion(R.drawable.quiz_chocoheart, "Heart", 3, R.drawable.imgcircle, R.drawable.imgsquare, R.drawable.imgoval, R.drawable.imgheart, R.raw.heart);
-        createShapeQuizQuestion(R.drawable.quiz_pizza, "Triangle", 1, R.drawable.imgrectangle, R.drawable.imgtriangle, R.drawable.imgoval, R.drawable.imgsquare, R.raw.triangle);
-        createShapeQuizQuestion(R.drawable.quiz_clock, "Circle", 0, R.drawable.imgcircle, R.drawable.imgstar, R.drawable.imgoval, R.drawable.imgtriangle, R.raw.circle);
-        createShapeQuizQuestion(R.drawable.quiz_door, "Rectangle", 2, R.drawable.imgtriangle, R.drawable.imgheart, R.drawable.imgrectangle, R.drawable.imgsquare, R.raw.rectangle);
+        createShapeQuizQuestion(R.drawable.quiz_chessboard, "Square", 3, R.drawable.choices_rectangle, R.drawable.choices_oval, R.drawable.choices_heart, R.drawable.choices_square, R.raw.square);
+        createShapeQuizQuestion(R.drawable.quiz_stars, "Star", 0, R.drawable.choices_star, R.drawable.choices_heart, R.drawable.choices_triangle, R.drawable.choices_rectangle, R.raw.star);
+        createShapeQuizQuestion(R.drawable.quiz_eggs, "Oval", 1, R.drawable.choices_square, R.drawable.choices_oval, R.drawable.choices_star, R.drawable.choices_circle, R.raw.oval);
+        createShapeQuizQuestion(R.drawable.quiz_chocoheart, "Heart", 3, R.drawable.choices_circle, R.drawable.choices_square, R.drawable.choices_triangle, R.drawable.choices_heart, R.raw.heart);
+        createShapeQuizQuestion(R.drawable.quiz_pizza, "Triangle", 1, R.drawable.choices_rectangle, R.drawable.choices_triangle, R.drawable.choices_oval, R.drawable.choices_square, R.raw.triangle);
+        createShapeQuizQuestion(R.drawable.quiz_clock, "Circle", 0, R.drawable.choices_circle, R.drawable.choices_star, R.drawable.choices_oval, R.drawable.choices_triangle, R.raw.circle);
+        createShapeQuizQuestion(R.drawable.quiz_door, "Rectangle", 2, R.drawable.choices_triangle, R.drawable.choices_heart, R.drawable.choices_rectangle, R.drawable.choices_square, R.raw.rectangle);
 
         System.out.println(hashMapQuestion.size());
     }

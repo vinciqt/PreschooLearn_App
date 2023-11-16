@@ -14,45 +14,45 @@
         <LinearLayout
             android:id="@+id/ll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnback"
-            android:layout_width="59dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#00244E0E"
-            android:fontFamily="@font/aksi_font"
-            android:scaleType="centerCrop"
-            android:src="@drawable/back"
-            android:textColor="@color/white"
-            android:textSize="2sp"
-            app:cornerRadius="90dp"
-            app:strokeColor="#633818"
-            app:strokeWidth="6dp" />
+            <ImageButton
+                android:id="@+id/btnback"
+                android:layout_width="59dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#00244E0E"
+                android:fontFamily="@font/aksi_font"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
+                android:textColor="@color/white"
+                android:textSize="2sp"
+                app:cornerRadius="90dp"
+                app:strokeColor="#633818"
+                app:strokeWidth="6dp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="45dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/txt_color"
-            android:textColor="#9e330d"
-            android:textSize="35sp" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginBottom="45dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/txt_color"
+                android:textColor="#9e330d"
+                android:textSize="35sp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="230dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,11 +60,11 @@
 
             <ImageButton
                 android:id="@+id/btnblue"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -76,19 +76,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="96dp">
             <ImageButton
                 android:id="@+id/btnred"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/red"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -96,8 +96,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -106,11 +106,11 @@
 
             <ImageButton
                 android:id="@+id/btnyellow"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -123,8 +123,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -132,11 +132,11 @@
             tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btnorange"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/orange"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -144,8 +144,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -154,11 +154,11 @@
 
             <ImageButton
                 android:id="@+id/btnviolet"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/violet"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -171,8 +171,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -180,11 +180,11 @@
             tools:layout_editor_absoluteY="218dp">
             <ImageButton
                 android:id="@+id/btngreen"
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />

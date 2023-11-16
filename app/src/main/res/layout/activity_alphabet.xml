@@ -54,7 +54,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="230dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/lettera"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -76,8 +76,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/letterb"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -97,8 +97,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -111,7 +111,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/letterc"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -121,8 +121,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -135,7 +135,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/letterd"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -143,8 +143,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -157,7 +157,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/lettere"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
@@ -167,8 +167,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -181,7 +181,7 @@
                     android:layout_height="230dp"
                     android:layout_marginTop="44dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
+                    android:scaleType="center"
                     android:src="@drawable/letterf"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -189,8 +189,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -203,7 +203,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -216,8 +216,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -229,15 +229,15 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterh"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -250,7 +250,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letteri"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -263,8 +263,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -276,7 +276,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterj"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -284,8 +284,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -298,7 +298,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterk"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -311,8 +311,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -324,7 +324,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterl"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -332,8 +332,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -346,7 +346,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -359,8 +359,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -372,7 +372,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/lettern"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -380,8 +380,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -394,7 +394,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/lettero"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -407,8 +407,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -420,7 +420,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -428,8 +428,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -442,7 +442,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterq"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -455,8 +455,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -468,7 +468,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterr"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -476,8 +476,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -490,7 +490,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letters"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -503,8 +503,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -516,7 +516,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/lettert"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -524,8 +524,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -538,7 +538,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letteru"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -551,8 +551,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -564,7 +564,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -572,8 +572,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -586,7 +586,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterw"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -599,8 +599,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -612,7 +612,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterx"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
@@ -620,8 +620,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -634,7 +634,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/lettery"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
@@ -647,8 +647,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|fill_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -660,7 +660,7 @@
                 android:layout_height="230dp"
                 android:layout_marginTop="44dp"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 android:src="@drawable/letterz"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll" />
