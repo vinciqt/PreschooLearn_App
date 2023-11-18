@@ -16,5 +16,5 @@
         android:backgroundTintMode="screen"
         android:scaleX="1"
         android:scaleY="1"
-        android:src="@drawable/imgtriangle" />
+        android:src="@drawable/imgtriangle"/>
 </LinearLayout>

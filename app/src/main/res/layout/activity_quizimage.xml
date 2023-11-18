@@ -60,7 +60,7 @@
             android:layout_marginBottom="75dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_lock_silent_mode_off"
+            android:src="@drawable/speaker"
             app:layout_constraintBottom_toTopOf="@+id/view"
             app:layout_constraintEnd_toStartOf="@+id/imageView5"
             app:layout_constraintStart_toStartOf="parent"

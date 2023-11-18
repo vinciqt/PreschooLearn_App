@@ -61,7 +61,7 @@ public class color extends AppCompatActivity {
         btnviolet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ShapeDialog(R.drawable.violet, R.string.txt_violet, R.raw.violet, new videoRaw().getVideoRaw(getPackageName(),R.raw.videopurple)).show(getSupportFragmentManager(), ShapeDialog.TAG);
+                new ShapeDialog(R.drawable.violet, R.string.txt_purple, R.raw.purple, new videoRaw().getVideoRaw(getPackageName(),R.raw.videopurple)).show(getSupportFragmentManager(), ShapeDialog.TAG);
             }
         });
         btngreen = findViewById(R.id.btngreen);

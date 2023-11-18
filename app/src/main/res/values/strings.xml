@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SCAN</string>
+    <string name="app_name">PreschooLearn</string>
     <string name="btn_start">START LEARNING</string>
     <string name="btn_shape">SHAPE</string>
     <string name="btn_color">COLOR</string>
@@ -50,7 +50,7 @@
     <string name="txt_red">RED</string>
     <string name="txt_yellow">YELLOW</string>
     <string name="txt_orange">ORANGE</string>
-    <string name="txt_violet">VIOLET</string>
+    <string name="txt_purple">PURPLE</string>
     <string name="txt_green">GREEN</string>
     <string name="txt_one">ONE</string>
     <string name="txt_two">TWO</string>

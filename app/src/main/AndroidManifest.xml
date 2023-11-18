@@ -10,6 +10,7 @@
             <action android:name="android.speech.RecognitionService" />
         </intent>
     </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,39 +22,42 @@
         android:theme="@style/Theme.SCAN"
         tools:targetApi="31">
         <activity
-            android:name=".quizhistory"
+            android:name=".scorequiz"
             android:exported="false" />
+        <activity
+            android:name=".quizhistory"
+            android:exported="true" />
         <activity
             android:name=".quizimage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".quizcategory"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".quizvoice"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".quiz"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".number"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".alphabet"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".color"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".shape"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CATEGORY"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
+            <intent-filter android:exported="true">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -62,6 +66,7 @@
 
         <service
             android:name=".bgService"
+            android:exported="true"
             android:stopWithTask="true" />
     </application>
 

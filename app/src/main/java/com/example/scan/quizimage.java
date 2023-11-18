@@ -108,7 +108,7 @@ public class quizimage extends AppCompatActivity {
             int counterShape = new ShapeQuizData().questionCounterShape();
 
             if(counterShape >= ShapeQuizData.SHAPE_QUESTION_NAMES.length) {
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, ShapeQuizData.SHAPE_QUESTION_NAMES.length);
                 return;
             }
 
@@ -139,7 +139,7 @@ public class quizimage extends AppCompatActivity {
                 }
             }
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, ShapeQuizData.SHAPE_QUESTION_NAMES.length);
         }
 
     }
@@ -173,7 +173,7 @@ public class quizimage extends AppCompatActivity {
         });
     }
 
-    public void finishQuiz(String currentScreen, String screenName){
+    public void finishQuiz(String currentScreen, String screenName, int quizItem){
 
         if(screenName.equals("Shape")){
             quizScoreDatabaseHelper.insertQuizScore("IMAGE", "SHAPE", Integer.toString(score), LocalDate.now().toString(), Integer.toString(ShapeQuizData.SHAPE_QUESTION_NAMES.length));
@@ -187,13 +187,16 @@ public class quizimage extends AppCompatActivity {
         if(screenName.equals("Number")){
             quizScoreDatabaseHelper.insertQuizScore("IMAGE", "NUMBER", Integer.toString(score), LocalDate.now().toString(), Integer.toString(NumberQuizData.NUMBER_QUESTION_NAMES.length));
         }
-        score = 0;
         ShapeQuizData.resetCounter();
         ColorQuizData.resetCounter();
         AlphabetQuizData.resetCounter();
         NumberQuizData.resetCounter();
-        Intent intent = new Intent(quizimage.this, quizhistory.class);
+        Intent intent = new Intent(quizimage.this, scorequiz.class);
         intent.putExtra("screen", currentScreen);
+        intent.putExtra("quizItem", Integer.toString(quizItem));
+        intent.putExtra("score", Integer.toString(score));
+
+        score = 0;
         startActivity(intent);
 
     }
@@ -207,7 +210,7 @@ public class quizimage extends AppCompatActivity {
             int counterColor = new ColorQuizData().questionCounterColor();
 
             if(counterColor >= ColorQuizData.COLOR_QUESTION_NAMES.length) {
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, ColorQuizData.COLOR_QUESTION_NAMES.length);
                 return;
             }
 
@@ -237,7 +240,7 @@ public class quizimage extends AppCompatActivity {
             }
 
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, ColorQuizData.COLOR_QUESTION_NAMES.length);
         }
 
     }
@@ -251,7 +254,7 @@ public class quizimage extends AppCompatActivity {
             int counterAlphabet = new AlphabetQuizData().questionCounterAlphabet();
 
             if(counterAlphabet >= AlphabetQuizData.ALPHABET_QUESTION_NAMES.length) {
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, AlphabetQuizData.ALPHABET_QUESTION_NAMES.length);
                 return;
             }
 
@@ -280,7 +283,7 @@ public class quizimage extends AppCompatActivity {
                 }
             }
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, AlphabetQuizData.ALPHABET_QUESTION_NAMES.length);
         }
 
     }
@@ -294,7 +297,7 @@ public class quizimage extends AppCompatActivity {
             int counterNumber = new NumberQuizData().questionCounterNumber();
 
             if(counterNumber >= NumberQuizData.NUMBER_QUESTION_NAMES.length) {
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, NumberQuizData.NUMBER_QUESTION_NAMES.length);
                 return;
             }
 
@@ -323,7 +326,7 @@ public class quizimage extends AppCompatActivity {
                 }
             }
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, NumberQuizData.NUMBER_QUESTION_NAMES.length);
         }
     }
 

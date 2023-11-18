@@ -29,16 +29,16 @@ public class VoiceNumberQuizData {
     public void setNumberQuestion() {
 
         randomNumbers=  rand.ints(0, NUMBER_QUESTION_NAMES.length).distinct().limit(NUMBER_QUESTION_NAMES.length).toArray();
-        createNumberQuizQuestion(R.drawable.quiz_cookie, "One");
-        createNumberQuizQuestion(R.drawable.quiz_persons, "Two");
-        createNumberQuizQuestion(R.drawable.quiz_robots, "Three");
-        createNumberQuizQuestion(R.drawable.quiz_dinos, "Four");
-        createNumberQuizQuestion(R.drawable.quiz_ghosts, "Five");
-        createNumberQuizQuestion(R.drawable.quiz_wizards, "Six");
-        createNumberQuizQuestion(R.drawable.quiz_witches, "Seven");
-        createNumberQuizQuestion(R.drawable.quiz_bees, mapBrokenNumber("Eight"));
-        createNumberQuizQuestion(R.drawable.quiz_parrots, "Nine");
-        createNumberQuizQuestion(R.drawable.quiz_ufos, mapBrokenNumber("Ten"));
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_1, "One");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_2, "Two");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_3, "Three");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_4, "Four");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_5, "Five");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_6, "Six");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_7, "Seven");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_8, mapBrokenNumber("Eight"));
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_9, "Nine");
+        createNumberQuizQuestion(R.drawable.quiznumbervoice_10, mapBrokenNumber("Ten"));
 
         System.out.println(hashMapQuestion.size());
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -33,6 +34,8 @@ public class ShapeDialog extends DialogFragment {
     public int sound;
     public String videoRaw;
 
+    public int stopPosition;
+
     ShapeDialog(int _imgSrc, int _title, int _sound, String _videoRaw){
         this.imageSrc = _imgSrc;
         this.title = _title;
@@ -46,6 +49,7 @@ public class ShapeDialog extends DialogFragment {
         View view = inflater.inflate(R.layout.dialog_shape_layout, container, false);
         ImageButton imageButton = view.findViewById(R.id.btnShapeDialog);
         TextView shapeTitle = view.findViewById(R.id.textShapeDialog);
+        FrameLayout videoViewWrapper = view.findViewById(R.id.videoViewWrapper);
         //imageButton.setImageResource(this.imageSrc);
         Glide.with(this.getContext()).load(this.imageSrc).into(imageButton);
         shapeTitle.setText(this.title);
@@ -55,14 +59,19 @@ public class ShapeDialog extends DialogFragment {
         Uri uri = Uri.parse(this.videoRaw);
         videoView.setVideoURI(uri);
 
-        MediaController mediaController = new MediaController(getContext());
-        videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
-        videoView.start();
+
+
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
-                mediaPlayer.setLooping(true);
+                /*mediaPlayer.setLooping(true);*/
+                MediaController mediaController = new MediaController(getContext());
+                mediaController.setAnchorView(videoView);
+                videoView.setMediaController(mediaController);
+                ((ViewGroup) mediaController.getParent()).removeView(mediaController);
+                videoViewWrapper.addView(mediaController);
+                mediaController.setVisibility(View.VISIBLE);
+                videoView.start();
             }
         });
 

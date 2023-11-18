@@ -258,7 +258,7 @@ public class quizvoice extends AppCompatActivity {
             int counterShape = new VoiceShapeQuizData().questionCounterShape();
 
             if(counterShape >= VoiceShapeQuizData.SHAPE_QUESTION_NAMES.length) {
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, VoiceShapeQuizData.SHAPE_QUESTION_NAMES.length);
                 return;
             }
 
@@ -269,7 +269,7 @@ public class quizvoice extends AppCompatActivity {
 
         }catch(Exception e){
 
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, VoiceShapeQuizData.SHAPE_QUESTION_NAMES.length);
         }
     }
 
@@ -281,7 +281,7 @@ public class quizvoice extends AppCompatActivity {
             }
             int counterColor = new VoiceColorQuizData().questionCounterColor();
             if(counterColor >= VoiceColorQuizData.COLOR_QUESTION_NAMES.length){
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, VoiceColorQuizData.COLOR_QUESTION_NAMES.length);
                 return;
             }
 
@@ -290,7 +290,7 @@ public class quizvoice extends AppCompatActivity {
 
             targetVoiceAnswer(micButton, question.getVoiceQuizCorrectAnswer(),currentScreen,screenName);
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, VoiceColorQuizData.COLOR_QUESTION_NAMES.length);
         }
     }
     public void generateAlphabetQuestion(String currentScreen, String screenName){
@@ -301,7 +301,7 @@ public class quizvoice extends AppCompatActivity {
             }
             int counterAlphabet = new VoiceColorQuizData().questionCounterColor();
             if(counterAlphabet >= VoiceColorQuizData.COLOR_QUESTION_NAMES.length){
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, VoiceColorQuizData.COLOR_QUESTION_NAMES.length);
                 return;
             }
 
@@ -310,7 +310,7 @@ public class quizvoice extends AppCompatActivity {
 
             targetVoiceAnswer(micButton, question.getVoiceQuizCorrectAnswer(),currentScreen,screenName);
         }catch (Exception e){
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, VoiceColorQuizData.COLOR_QUESTION_NAMES.length);
         }
     }
     public void generateNumberQuestion(String currentScreen, String screenName){
@@ -321,7 +321,7 @@ public class quizvoice extends AppCompatActivity {
             }
             int counterNumber = new VoiceNumberQuizData().questionCounterNumber();
             if(counterNumber >= VoiceNumberQuizData.NUMBER_QUESTION_NAMES.length){
-                finishQuiz(currentScreen, screenName);
+                finishQuiz(currentScreen, screenName, VoiceNumberQuizData.NUMBER_QUESTION_NAMES.length);
                 return;
             }
 
@@ -331,12 +331,12 @@ public class quizvoice extends AppCompatActivity {
             targetVoiceAnswer(micButton, question.getVoiceQuizCorrectAnswer(),currentScreen,screenName);
         }catch (Exception e){
             e.printStackTrace();
-            finishQuiz(currentScreen, screenName);
+            finishQuiz(currentScreen, screenName, VoiceNumberQuizData.NUMBER_QUESTION_NAMES.length);
         }
     }
 
 
-    public void finishQuiz(String currentScreen, String screenName){
+    public void finishQuiz(String currentScreen, String screenName, int quizItem){
         if(screenName.equals("Shape")){
             quizScoreDatabaseHelper.insertQuizScore("VOICE", "SHAPE", Integer.toString(score), LocalDate.now().toString(), Integer.toString(VoiceShapeQuizData.SHAPE_QUESTION_NAMES.length));
         }
@@ -355,8 +355,10 @@ public class quizvoice extends AppCompatActivity {
         VoiceColorQuizData.resetCounter();
         VoiceAlphabetQuizData.resetCounter();
         VoiceNumberQuizData.resetCounter();
-        Intent intent = new Intent(this, quizhistory.class);
+        Intent intent = new Intent(this, scorequiz.class);
         intent.putExtra("screen", currentScreen);
+        intent.putExtra("quizItem", quizItem);
+        intent.putExtra("score", score);
         startActivity(intent);
 
     }

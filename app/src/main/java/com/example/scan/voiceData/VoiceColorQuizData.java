@@ -30,7 +30,7 @@ public class VoiceColorQuizData {
         System.out.println("CHECK RANDOM " + Arrays.toString(randomNumbers));
         randomNumbers = rand.ints(0, COLOR_QUESTION_NAMES.length).distinct().limit(COLOR_QUESTION_NAMES.length).toArray();
         createColorQuizQuestion(R.drawable.quiz_dolphin, "Blue");
-        createColorQuizQuestion(R.drawable.quiz_eggplant, "Violet");
+        createColorQuizQuestion(R.drawable.quiz_eggplant, "Purple");
         createColorQuizQuestion(R.drawable.quiz_apple, "Red");
         createColorQuizQuestion(R.drawable.quiz_parrot, "Green");
         createColorQuizQuestion(R.drawable.quiz_ball, "Orange");
